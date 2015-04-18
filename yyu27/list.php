@@ -7,14 +7,20 @@ session_start();
 //$value = $_GET['value'];
 $table ='PATIENT' ;
 $attribute = 'Patient_Id';
-if(isset($_GET['value'])){$value = $_GET['value'];}
-
-else
-	// do the thing
+if(isset($_GET['value']))
+{
+	$value = $_GET['value'];
+	if($value < 1000 || $value > 2000) 
+	{	
+	$value = *;
+	echo 'input invalid, output everything';
+	}
+}
+else	// do the thing
 {
 	?>
-	<form action = 'list.php'>
-	<label> "PLEASE ENTER VALID ID"</label>;
+	<form action = "list.php">
+	<label>PLEASE ENTER VALID ID between 1000 to 2000</label>
 	</form>
 	<?php
 }
