@@ -19,7 +19,7 @@ $value = $_GET['value'];
    <body>
 	<h2>Show</h2>
 
-<FORM NAME ="form1" METHOD =" " ACTION = "">
+<FORM NAME ="form1" METHOD ="post" ACTION = "">
 
 <INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "value">
 <INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
