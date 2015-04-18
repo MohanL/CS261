@@ -9,9 +9,11 @@ $table ='PATIENT' ;
 $attribute = 'Patient_Id';
 if(isset($_GET['value'])){$value = $_GET['value'];}
 else
+	// do the thing
 {
 	<form action = 'list.php'>
-	<label> "PLEASE ENTER VALID ID"<\label>;
+	<label> "PLEASE ENTER VALID ID"</label>;
+	</form>
 }
 ?>
 <title>List Page</title>
