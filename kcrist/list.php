@@ -7,6 +7,7 @@ session_start();
 //$value = $_GET['value'];
 $table ='MEDICATION' ;
 $attribute = 'Med_Id';
+$value = $_GET['value'];
 
 ?>
 <title>List Page</title>
@@ -30,6 +31,13 @@ catch (PDOException $e) {
     print "DB Connection Error!: " . $e->getMessage();
     die();
 }
+<FORM NAME ="form1" METHOD ="" ACTION = "">
+
+<INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "value">
+<INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
+
+
+</FORM>
 // print out information about the query
 echo '<p>', 'Query pull (kcrist) as of ', date("Y-m-d H:i:s"), '</p>';
 // print out format 
@@ -50,7 +58,7 @@ echo '<tr>',
 
 // sql query formation
 echo "Query Generated:";
-$sql = "select * from $table";
+$sql = "select * from $table while $attribute=$value";
 echo PHP_EOL;
 echo $sql;
 $stmt = $db->query( $sql );
