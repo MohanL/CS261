@@ -7,9 +7,9 @@ session_start();
 //$value = $_GET['value'];
 $table ='MEDICATION' ;
 $attribute = 'Med_Id';
-//$value = $_GET['value'];
+$value = $_GET['value'];
 
-if(isset($_GET['value']))
+/* if(isset($_GET['value']))
 {
 	$value = $_GET['value'];
 	if(($value < 0) || ($value > 100))
@@ -25,7 +25,7 @@ else	// do the thing
 	<label>PLEASE ENTER VALID ID between 0 to 100</label>
 	</form>
 	<?php
-}
+} */
 ?>
 <title>List Page</title>
 </head>
