@@ -7,7 +7,20 @@ session_start();
 //$value = $_GET['value'];
 $table ='STAFF' ;
 $attribute = 'Staff_Id';
-$value = $_GET['value'];
+if(isset($_GET['value']))
+{
+	$value = $_GET['value'];
+	{	
+		echo 'input invalid, output everything';
+	}
+}
+else	// do the thing
+{
+	?>
+	<form action = "list.php">
+	</form>
+	<?php
+}
 ?>
 <title>show Page</title>
 </head>
