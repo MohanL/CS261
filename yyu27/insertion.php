@@ -15,7 +15,6 @@ $table ='PATIENT' ;
 <INPUT TYPE = "TEXT" VALUE ="First_Name" NAME = "FN">
 <INPUT TYPE = "TEXT" VALUE ="Last_Name" NAME = "LN">
 <INPUT TYPE = "TEXT" VALUE ="Gender" NAME = "G">
-<INPUT TYPE = "TEXT" VALUE ="SSN" NAME = "SSN">
 <INPUT TYPE = "TEXT" VALUE ="Home_Phone" NAME = "HP">
 <INPUT TYPE = "TEXT" VALUE ="Cell_Phone" NAME = "CP">
 <INPUT TYPE = "TEXT" VALUE ="Emerg_Contact" NAME = "EC">
@@ -56,7 +55,6 @@ echo '<tr>',
 	    '<th>First_Name</th>',
 	    '<th>Last_Name</th>',
 	    '<th>Gender</th>',
-        '<th>SSN</th>',
 	    '<th>Home_Phone</th>',
 	    '<th>Cell_Phone</th>',
 	    '<th>Emerg_Contact</th>',
@@ -72,17 +70,16 @@ echo '<tr>',
       "</tr>\n";
 //******************************************************insertion code
 echo nl2br("\nInsertion Query Generated:");
-if( (!isset($_GET['PI'])) || (!isset($_GET['FN'])) || (!isset($_GET['LN'])) || (!isset($_GET['G'])) || (!isset($_GET['SSN'])) || (!isset($_GET['HP'])) || (!isset($_GET['CP'])) || (!isset($_GET['EC'])) || (!isset($_GET['B']))|| (!isset($_GET['A'])) || (!isset($_GET['SH']))|| (!isset($_GET['VD'])) || (!isset($_GET['SI']))|| (!isset($_GET['I'])) || (!isset($_GET['MI']))|| (!isset($_GET['R'])))
+if( (!isset($_GET['PI'])) || (!isset($_GET['FN'])) || (!isset($_GET['LN'])) || (!isset($_GET['G'])) || (!isset($_GET['HP'])) || (!isset($_GET['CP'])) || (!isset($_GET['EC'])) || (!isset($_GET['BD']))|| (!isset($_GET['A'])) || (!isset($_GET['SH']))|| (!isset($_GET['VD'])) || (!isset($_GET['SI']))|| (!isset($_GET['I'])) || (!isset($_GET['MI']))|| (!isset($_GET['R'])))
 {
 	if (!isset($_GET['PI'])) echo nl2br("\nERROR : need Patient_Id");
 	if (!isset($_GET['FN'])) echo nl2br("\nERROR : need Patient First_Name");
 	if (!isset($_GET['LN'])) echo nl2br("\nERROR : need Patient Last_Name");
 	if (!isset($_GET['G'])) echo nl2br("\nERROR : need Patient Gender");
-	if (!isset($_GET['SSN'])) echo nl2br("\nERROR : need Patient SSN");
 	if (!isset($_GET['HP'])) echo nl2br("\nERROR : need Patient Home_Phone");
 	if (!isset($_GET['CP'])) echo nl2br("\nERROR : need Patient Cell_Phone");
     if (!isset($_GET['EC'])) echo nl2br("\nERROR : need Patient Emerg_Contact");
-	if (!isset($_GET['B'])) echo nl2br("\nERROR : need Patient Birthday");
+	if (!isset($_GET['BD'])) echo nl2br("\nERROR : need Patient Birthday");
 	if (!isset($_GET['A'])) echo nl2br("\nERROR : need Patient Allergies");
 	if (!isset($_GET['SH'])) echo nl2br("\nERROR : need Patient Surgical_History");
 	if (!isset($_GET['VD'])) echo nl2br("\nERROR : need Patient Visit_Date");
@@ -96,15 +93,14 @@ else
 {
 //**************************************
 // insertion into STAFF
-$ISI = $_GET['PI'];
+$IPI = $_GET['PI'];
 $ILN = $_GET['LN'];  
 $IFN = $_GET['FN'];
 $IG = $_GET['G'];
-$ISSN = $_GET['SSN'];
 $IHP = $_GET['HP'];
 $ICP = $_GET['CP'];
 $IEC = $_GET['EC'];
-$IB = $_GET['B'];
+$IB = $_GET['BD'];
 $IA = $_GET['A'];
 $ISH = $_GET['SH'];
 $IVD = $_GET['VD'];
@@ -113,7 +109,7 @@ $II = $_GET['I'];
 $IMI = $_GET['MI'];
 $IR = $_GET['R'];
 //****************************************
-	$sql2 = "insert into $table values($ISI,'$ILN', '$IFN',$IG,$ISSN,$IHP,$ICP,'$IB',$IEC,'$IA','$ISH','$IVD',$ISI,'$II',$IMI,'$IR')";
+	$sql2 = "insert into $table values($IPI,'$ILN', '$IFN',$IG,$IHP,$ICP,'$IB',$IEC,'$IA','$ISH','$IVD',$ISI,'$II',$IMI,'$IR')";
 	echo PHP_EOL;
 	echo $sql2;
 	$count = $db->exec($sql2);
@@ -130,7 +126,6 @@ $Patient_Id = $row['Patient_Id'];
 $First_Name = $row['First_Name'];
 $Last_Name = $row['Last_Name'];
 $Gender = $row['Gender'];
-$SSN = $row['SSN'];
 $Home_Phone = $row['Home_Phone'];
 $Cell_Phone = $row['Cell_Phone'];
 $Emerg_Contact = $row['Emerg_Contact'];
@@ -145,11 +140,10 @@ $Reason = $row['Reason'];
 $link = 'show';
 echo '<tr>';
 // make the entry listing the team span across n+1 rows, where n = size of the team
-echo "<td class='firstrow'>$Staff_Id</td>";
+echo "<td class='firstrow'>$Patient_Id</td>";
 echo "<td class='firstrow'>$First_Name</td>";
 echo "<td class='firstrow'>$Last_Name</td>";
 echo "<td class='firstrow'>$Gender</td>";
-echo "<td class='firstrow'>$SSN</td>";
 echo "<td class='firstrow'>$Home_Phone</td>";
 echo "<td class='firstrow'>$Cell_Phone</td>";
 echo "<td class='firstrow'>$Birthday</td>";
@@ -161,7 +155,7 @@ echo "<td class='firstrow'>$Staff_Id</td>";
 echo "<td class='firstrow'>$Insurance</td>"; 
 echo "<td class='firstrow'>$Med_Id</td>"; 
 echo "<td class='firstrow'>$Reason</td>"; 
-echo "<td class='firstrow'><a href='list_supplementary.php?value=$Staff_Id'>$link</a>
+echo "<td class='firstrow'><a href='list_supplementary.php?value=$Patient_Id'>$link</a>
 </div>
 </td>";
 echo "</tr>\n"; 
