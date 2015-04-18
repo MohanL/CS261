@@ -36,7 +36,7 @@ else	// do the thing
 
 <INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "value">
 <INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
-
+</FORM>
 <?php
 // connect to the database 
 $dbtype = 'mysql';
@@ -55,7 +55,7 @@ catch (PDOException $e) {
 }
 
 
-</FORM>
+
 // print out information about the query
 echo '<p>', 'Query pull (kcrist) as of ', date("Y-m-d H:i:s"), '</p>';
 // print out format 
