@@ -67,6 +67,7 @@ echo '<tr>',
 	    '<th>Manf</th>',
 	    '<th>Contents</th>',
 	    '<th>Effects</th>',
+	    '<th>Form</th>',
 	    '<th>Dosage</th>',
 	    '<th>Side_Effects</th>',
 	    '<th>Schedule</th>',
@@ -77,7 +78,7 @@ echo '<tr>',
 
 //******************************************************insertion code
 echo nl2br("\nInsertion Query Generated:");
-if( (!isset($_GET['Med_Id'])) || (!isset($_GET['Name'])) || (!isset($_GET['Manf'])) || (!isset($_GET['IF'])) || (!isset($_GET['Contents'])) || (!isset($_GET['Effects'])) || (!isset($_GET['Dosage'])) || (!isset($_GET['Side_Effects'])) || (!isset($_GET['Schedule'])) || (!isset($_GET['Description']))|| (!isset($_GET['Cost'])))
+if( (!isset($_GET['Med_Id'])) || (!isset($_GET['Name'])) || (!isset($_GET['Manf'])) || (!isset($_GET['Form'])) || (!isset($_GET['Contents'])) || (!isset($_GET['Effects'])) || (!isset($_GET['Dosage'])) || (!isset($_GET['Side_Effects'])) || (!isset($_GET['Schedule'])) || (!isset($_GET['Description']))|| (!isset($_GET['Cost'])))
 {
 	if (!isset($_GET['Med_Id'])) echo nl2br("\nERROR : need Med_Id");
 	if (!isset($_GET['Name'])) echo nl2br("\nERROR : need Medicine Name");
