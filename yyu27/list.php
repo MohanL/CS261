@@ -7,13 +7,18 @@ session_start();
 //$value = $_GET['value'];
 $table ='PATIENT' ;
 $attribute = 'Patient_Id';
-
+$value = $_GET['value'];
 ?>
 <title>List Page</title>
 </head>
-
    <body>
-	<h2>list</h2>
+   <h2>list</h2>
+<FORM NAME ="form1" METHOD =" " ACTION = "">
+
+<INPUT TYPE = "TEXT" VALUE ="Patient_Id" NAME = "value">
+<INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
+<\FORM>
+	
 <?php
 // connect to the database 
 $dbtype = 'mysql';
@@ -22,6 +27,7 @@ $dbpass = 'xxxxx';
 $dbname = 'test';
 $dbhost = 'localhost';
 $dsn = "$dbtype:host=$dbhost;dbname=$dbname";
+
 
 try {
     $db = new PDO($dsn, $dbuser, $dbpass);
