@@ -94,7 +94,7 @@ $IRemark = $_GET['Remark'];
 $ISDD = $_GET['SDD'];
 //****************************************
 	
-$sql2 = "insert into $table values($IDI,'$IPF', '$IPL',$IPI,$ISI,$IDD,$ISeverity,'$IDDate',$IMI,$IRemark,'$ISDD')";
+$sql2 = "insert into $table values($IDI,'$IPF', '$IPL',$IPI,$ISI,'$IDD',$ISeverity,'$IDDate',$IMI,'$IRemark','$ISDD')";
 echo PHP_EOL;
 echo $sql2;
 $count = $db->exec($sql2);
