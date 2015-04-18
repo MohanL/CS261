@@ -7,13 +7,18 @@ session_start();
 //$value = $_GET['value'];
 $table ='STAFF' ;
 $attribute = 'Staff_Id';
-
+$value = $_GET['value'];
 ?>
 <title>show Page</title>
 </head>
 
    <body>
 	<h2>Show</h2>
+<FORM NAME ="form1" METHOD =" " ACTION = "">
+
+<INPUT TYPE = "TEXT" VALUE ="Staff_Id" NAME = "value">
+<INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
+</FORM>
 <?php
 // connect to the database 
 $dbtype = 'mysql';
@@ -51,7 +56,7 @@ echo '<tr>',
 
 // sql query formation
 echo "Query Generated:";
-$sql = "select * from $table";
+$sql = "select * from $table where $attribute = $value";
 echo PHP_EOL;
 echo $sql;
 $stmt = $db->query( $sql );
