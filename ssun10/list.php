@@ -66,7 +66,6 @@ echo '<tr>',
 	    '<th>Diag_Date</th>',
 	    '<th>Med_Id</th>',
 	    '<th>Remark</th>',
-	    '<th>Patient_Id</th>',
 	    '<th>Second_Diag_Date</th>',
 	    '<th> show</th>',
       "</tr>\n";
@@ -91,7 +90,6 @@ $Severity= $row['Severity'];
 $Diag_Date= $row['Diag_Date'];
 $Med_id= $row['Med_id'];
 $Remark= $row['Remark'];
-$Patient_Id= $row['Patient_Id'];
 $Second_Diag_Date = $row['Second_Diag_Date'];
 $link = 'show';
 echo '<tr>';
@@ -106,7 +104,6 @@ echo "<td class='firstrow'>$Severity</td>";
 echo "<td class='firstrow'>$Diag_Date</td>";
 echo "<td class='firstrow'>$Med_id</td>";
 echo "<td class='firstrow'>$Remark</td>";
-echo "<td class='firstrow'>$Patient_Id</td>";
 echo "<td class='firstrow'>$Second_Diag_Date</td>";
 echo "<td class='firstrow'><a href='list_supplementary.php?value=$Diag_Id'>$link</a>
 </div>
