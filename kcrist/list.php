@@ -32,6 +32,13 @@ else	// do the thing
 
    <body>
 	<h2>list</h2>
+	<FORM NAME ="form1" METHOD ="" ACTION = "">
+
+<INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "value">
+<INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
+
+
+</FORM>
 <?php
 // connect to the database 
 $dbtype = 'mysql';
@@ -48,13 +55,7 @@ catch (PDOException $e) {
     print "DB Connection Error!: " . $e->getMessage();
     die();
 }
-<FORM NAME ="form1" METHOD ="" ACTION = "">
 
-<INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "value">
-<INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
-
-
-</FORM>
 // print out information about the query
 echo '<p>', 'Query pull (kcrist) as of ', date("Y-m-d H:i:s"), '</p>';
 // print out format 
