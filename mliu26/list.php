@@ -10,7 +10,9 @@ $attribute = 'Staff_Id';
 if(isset($_GET['value']))
 {
 	$value = $_GET['value'];
+	if(($value < 2001) || ($value > 2999))
 	{	
+		$value = 'Staff_Id';
 		echo 'input invalid, output everything';
 	}
 }
@@ -18,15 +20,16 @@ else	// do the thing
 {
 	?>
 	<form action = "list.php">
+	<label>PLEASE ENTER VALID ID between 2000 to 3000</label>
 	</form>
 	<?php
 }
 ?>
-<title>show Page</title>
+<title>List Page</title>
 </head>
 
    <body>
-	<h2>Show</h2>
+	<h2>List</h2>
 <FORM NAME ="form1" METHOD =" " ACTION = "">
 
 <INPUT TYPE = "TEXT" VALUE ="Staff_Id" NAME = "value">
