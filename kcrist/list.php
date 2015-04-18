@@ -27,7 +27,6 @@ else	// do the thing
 	<?php
 }
 ?>
-?>
 <title>List Page</title>
 </head>
 
