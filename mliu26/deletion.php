@@ -12,17 +12,7 @@ $table ='STAFF' ;
 <!-- Insertion code -->
 <FORM NAME = "form2" METHOD =" " ACTION = "">
 <INPUT TYPE = "TEXT" VALUE ="Staff_Id" NAME = "SI">
-<INPUT TYPE = "TEXT" VALUE ="First_Name" NAME = "FN">
-<INPUT TYPE = "TEXT" VALUE ="Last_Name" NAME = "LN">
-<INPUT TYPE = "TEXT" VALUE ="Gender" NAME = "G">
-<INPUT TYPE = "TEXT" VALUE ="SSN" NAME = "SSN">
-<INPUT TYPE = "TEXT" VALUE ="Home_Phone" NAME = "HP">
-<INPUT TYPE = "TEXT" VALUE ="Mobile_Phone" NAME = "MP">
-<INPUT TYPE = "TEXT" VALUE ="Email" NAME = "E">
-<INPUT TYPE = "TEXT" VALUE ="Department_Id" NAME = "DI">
-<INPUT TYPE = "TEXT" VALUE ="Position_Id" NAME = "PI">
-<INPUT TYPE = "TEXT" VALUE ="Position_Title" NAME = "PT">
-<INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
+<INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
 </FORM>
 <!-- Insertion code -->
 
@@ -62,45 +52,25 @@ echo '<tr>',
       "</tr>\n";
 //******************************************************insertion code
 echo nl2br("\nInsertion Query Generated:");
-if( (!isset($_GET['SI'])) || (!isset($_GET['FN'])) || (!isset($_GET['LN'])) || (!isset($_GET['G'])) || (!isset($_GET['SSN'])) || (!isset($_GET['HP'])) || (!isset($_GET['MP'])) || (!isset($_GET['E'])) || (!isset($_GET['DI']))|| (!isset($_GET['PI'])) || (!isset($_GET['PT'])))
+if(!isset($_GET['SI']) )
 {
 	if (!isset($_GET['SI'])) echo nl2br("\nERROR : need Staff_Id");
-	if (!isset($_GET['FN'])) echo nl2br("\nERROR : need Staff First_Name");
-	if (!isset($_GET['LN'])) echo nl2br("\nERROR : need Staff Last_Name");
-	if (!isset($_GET['G'])) echo nl2br("\nERROR : need Staff Gender");
-	if (!isset($_GET['SSN'])) echo nl2br("\nERROR : need Staff SSN");
-	if (!isset($_GET['HP'])) echo nl2br("\nERROR : need Staff Home_Phone");
-	if (!isset($_GET['MP'])) echo nl2br("\nERROR : need Staff Mobile_Phone");
-	if (!isset($_GET['E'])) echo nl2br("\nERROR : need Staff Email address");
-	if (!isset($_GET['DI'])) echo nl2br("\nERROR : need Staff Department_Id");
-	if (!isset($_GET['PI'])) echo nl2br("\nERROR : need Staff Position_Id");
-	if (!isset($_GET['PT'])) echo nl2br("\nERROR : need Staff Position_Title");
-	echo nl2br("\nERROR : Insertion incomplete");
+	echo nl2br("\nERROR : Deletion incomplete");
 }
 else
 {
 //**************************************
 // insertion into STAFF
 $ISI = $_GET['SI'];
-$ILN = $_GET['LN'];  
-$IFN = $_GET['FN'];
-$IG = $_GET['G'];
-$ISSN = $_GET['SSN'];
-$IHP = $_GET['HP'];
-$IMP = $_GET['MP'];
-$IE = $_GET['E'];
-$IDI = $_GET['DI'];
-$IPI = $_GET['PI'];
-$IPT = $_GET['PT'];
 //****************************************
 	
 	// change to deletion 
-	$sql2 = "insert into $table values($ISI,'$ILN', '$IFN',$IG,$ISSN,$IHP,$IMP,'$IE',$IDI,$IPI,'$IPT')";
+	$sql2 = "delete from $table where Staff_Id = $ISI";
 	echo PHP_EOL;
 	echo $sql2;
 	$count = $db->exec($sql2);
 	/* Return number of rows that were deleted */
-	print("Insert $count rows.\n");
+	print("\nDelete $count rows.\n");
 
 }
 //******************************************************insertion code
