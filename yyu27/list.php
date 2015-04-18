@@ -12,7 +12,7 @@ if(isset($_GET['value']))
 	$value = $_GET['value'];
 	if(($value < 1000) || ($value > 2000))
 	{	
-		$value = *;
+		$value = 2001;
 		echo 'input invalid, output everything';
 	}
 }
