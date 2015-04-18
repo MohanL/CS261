@@ -61,7 +61,7 @@ echo '<tr>',
 
 // sql query formation
 echo "Query Generated:";
-$sql = "select * from $table";
+$sql = "select * from $table where $attribute = $value";
 echo PHP_EOL;
 echo $sql;
 $stmt = $db->query( $sql );
