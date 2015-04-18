@@ -15,16 +15,26 @@ $table ='MEDICATION' ;
 	<h2>Insertion</h2>
 <!-- Insertion code -->
 <FORM NAME = "form2" METHOD =" " ACTION = "">
-<INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "SI">
-<INPUT TYPE = "TEXT" VALUE ="Name" NAME = "FN">
-<INPUT TYPE = "TEXT" VALUE ="Manf" NAME = "LN">
-<INPUT TYPE = "TEXT" VALUE ="Contents" NAME = "G">
-<INPUT TYPE = "TEXT" VALUE ="Effects" NAME = "SSN">
-<INPUT TYPE = "TEXT" VALUE ="Dosage" NAME = "HP">
-<INPUT TYPE = "TEXT" VALUE ="Side_Effects" NAME = "MP">
-<INPUT TYPE = "TEXT" VALUE ="Schedule" NAME = "E">
-<INPUT TYPE = "TEXT" VALUE ="Description" NAME = "DI">
-<INPUT TYPE = "TEXT" VALUE ="Cost" NAME = "PI">
+Med ID:<INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "Med_Id">
+<br><br>
+Name:<INPUT TYPE = "TEXT" VALUE ="Name" NAME = "Name">
+<br><br>
+Manufacturer:<INPUT TYPE = "TEXT" VALUE ="Manf" NAME = "Manf">
+<br><br>
+Contents:<INPUT TYPE = "TEXT" VALUE ="Contents" NAME = "Contents">
+<br><br>
+Effects:<INPUT TYPE = "TEXT" VALUE ="Effects" NAME = "Effects">
+<br><br>
+Dosage:<INPUT TYPE = "TEXT" VALUE ="Dosage" NAME = "Dosage">
+<br><br>
+Side Effects:<INPUT TYPE = "TEXT" VALUE ="Side_Effects" NAME = "Side_Effects">
+<br><br>
+Schedule:<INPUT TYPE = "TEXT" VALUE ="Schedule" NAME = "Schedule">
+<br><br>
+Description:<INPUT TYPE = "TEXT" VALUE ="Description" NAME = "Description">
+<br><br>
+Cost:<INPUT TYPE = "TEXT" VALUE ="Cost" NAME = "Cost">
+<br><br>
 <INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
 </FORM>
 <!-- Insertion code -->
