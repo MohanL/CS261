@@ -63,6 +63,7 @@ echo '<tr>',
 	    '<th>Manf</th>',
 	    '<th>Contents</th>',
 	    '<th>Effects</th>',
+	    '<th>Form</th>',
 	    '<th>Dosage</th>',
 	    '<th>Side_Effects</th>',
 	    '<th>Schedule</th>',
@@ -86,6 +87,7 @@ $Name= $row['Name'];
 $Manf= $row['Manf'];
 $Contents= $row['Contents'];
 $Effects= $row['Effects'];
+$Form= $row['Form'];
 $Dosage= $row['Dosage'];
 $Side_Effects= $row['Side_Effects'];
 $Schedule= $row['Schedule'];
@@ -99,6 +101,7 @@ echo "<td class='firstrow'>$Name</td>";
 echo "<td class='firstrow'>$Manf</td>";
 echo "<td class='firstrow'>$Contents</td>";
 echo "<td class='firstrow'>$Effects</td>";
+echo "<td class='firstrow'>$Form</td>";
 echo "<td class='firstrow'>$Dosage</td>";
 echo "<td class='firstrow'>$Side_Effects</td>";
 echo "<td class='firstrow'>$Schedule</td>";
