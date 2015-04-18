@@ -10,10 +10,10 @@ $attribute = 'Patient_Id';
 if(isset($_GET['value']))
 {
 	$value = $_GET['value'];
-	if($value < 1000 || $value > 2000) 
+	if(($value < 1000) || ($value > 2000))
 	{	
-	$value = *;
-	echo 'input invalid, output everything';
+		$value = *;
+		echo 'input invalid, output everything';
 	}
 }
 else	// do the thing
