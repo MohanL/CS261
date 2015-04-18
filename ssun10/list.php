@@ -7,7 +7,23 @@ session_start();
 //$value = $_GET['value'];
 $table ='DIAGNOSIS' ;
 $attribute = 'Diag_Id';
-$value = $_GET['value'];
+if(isset($_GET['value']))
+{
+	$value = $_GET['value'];
+	if(($value < 4001) || ($value > 4999))
+	{	
+		$value = 'Diag_Id';
+		echo 'input invalid, output everything';
+	}
+}
+else	// do the thing
+{
+	?>
+	<form action = "list.php">
+	<label>PLEASE ENTER VALID ID between 4000 to 5000</label>
+	</form>
+	<?php
+}
 ?>
 <title>List Page</title>
 </head>
