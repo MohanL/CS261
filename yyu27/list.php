@@ -17,7 +17,7 @@ $value = $_GET['value'];
 
 <INPUT TYPE = "TEXT" VALUE ="Patient_Id" NAME = "value">
 <INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
-<\FORM>
+</FORM>
 	
 <?php
 // connect to the database 
