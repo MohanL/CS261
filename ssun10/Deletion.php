@@ -64,14 +64,15 @@ else
 $IDI = $_GET['DI'];
 //****************************************
 	
+	if($IDI != 'Diag_Id')
 	// change to deletion 
-	$sql2 = "delete from $table where Diag_Id = $IDI";
+{	$sql2 = "delete from $table where Diag_Id = $IDI";
 	echo PHP_EOL;
 	echo $sql2;
 	$count = $db->exec($sql2);
 	/* Return number of rows that were deleted */
 	print("\nDelete $count rows.\n");
-
+}
 }
 //******************************************************insertion code
 // print out 
