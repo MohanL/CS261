@@ -25,6 +25,8 @@ Contents:<INPUT TYPE = "TEXT" VALUE ="Contents" NAME = "Contents">
 <br><br>
 Effects:<INPUT TYPE = "TEXT" VALUE ="Effects" NAME = "Effects">
 <br><br>
+Form:<INPUT TYPE = "TEXT" VALUE ="Form" NAME = "Form">
+<br><br>
 Dosage:<INPUT TYPE = "TEXT" VALUE ="Dosage" NAME = "Dosage">
 <br><br>
 Side Effects:<INPUT TYPE = "TEXT" VALUE ="Side_Effects" NAME = "Side_Effects">
@@ -75,44 +77,47 @@ echo '<tr>',
 
 //******************************************************insertion code
 echo nl2br("\nInsertion Query Generated:");
-if( (!isset($_GET['Med_Id'])) || (!isset($_GET['Name'])) || (!isset($_GET['Manf'])) || (!isset($_GET['Contents'])) || (!isset($_GET['Effects'])) || (!isset($_GET['Dosage'])) || (!isset($_GET['Side_Effects'])) || (!isset($_GET['Schedule'])) || (!isset($_GET['Description']))|| (!isset($_GET['Cost']))
+if( (!isset($_GET['Med_Id'])) || (!isset($_GET['Name'])) || (!isset($_GET['Manf'])) || (!isset($_GET['IF'])) || (!isset($_GET['Contents'])) || (!isset($_GET['Effects'])) || (!isset($_GET['Dosage'])) || (!isset($_GET['Side_Effects'])) || (!isset($_GET['Schedule'])) || (!isset($_GET['Description']))|| (!isset($_GET['Cost'])))
 {
 	if (!isset($_GET['Med_Id'])) echo nl2br("\nERROR : need Med_Id");
 	if (!isset($_GET['Name'])) echo nl2br("\nERROR : need Medicine Name");
 	if (!isset($_GET['Manf'])) echo nl2br("\nERROR : need Medicine Manufacturer");
 	if (!isset($_GET['Contents'])) echo nl2br("\nERROR : need Medicine Contents");
 	if (!isset($_GET['Effects'])) echo nl2br("\nERROR : need Effects");
+	if (!isset($_GET['Form'])) echo nl2br("\nERROR : need Form");
 	if (!isset($_GET['Dosage'])) echo nl2br("\nERROR : need Dosage");
 	if (!isset($_GET['Side_Effects'])) echo nl2br("\nERROR : need Side Effects");
 	if (!isset($_GET['Schedule'])) echo nl2br("\nERROR : need Schedule");
 	if (!isset($_GET['Description'])) echo nl2br("\nERROR : need Description");
 	if (!isset($_GET['Cost'])) echo nl2br("\nERROR : need Cost");
 	echo nl2br("\nERROR : Insertion incomplete");
+//****************************************
 }
 else
 {
-//**************************************
-// insertion into MED
-$ISI = $_GET['Med_Id'];
-$ILN = $_GET['Name';  
-$IFN = $_GET['Manf'];
-$IG = $_GET['Contents'];
-$ISSN = $_GET['Effects'];
-$IHP = $_GET['Dosage'];
-$IMP = $_GET['Side_Effects'];
-$IE = $_GET['Schedule'];
-$IDI = $_GET['Description'];
-$IPI = $_GET['Cost'];
-//****************************************
-	$sql2 = "insert into $table values($ISI,'$ILN', '$IFN',$IG,$ISSN,$IHP,$IMP,'$IE',$IDI,$IPI)";
+////**************************************
+//// insertion into MED
+$IMI = $_GET['Med_Id'];
+$IN = $_GET['Name'];  
+$IM = $_GET['Manf'];
+$IC = $_GET['Contents'];
+$IE = $_GET['Effects'];
+$IF = $_GET['Form'];
+$ID = $_GET['Dosage'];
+$ISE = $_GET['Side_Effects'];
+$IS = $_GET['Schedule'];
+$ID = $_GET['Description'];
+$IC = $_GET['Cost'];
+////****************************************
+	$sql2 = "insert into MEDICATION values($IMI,'$IN', '$IM','$IC','$IE','$IF','$ID','$ISE','$IS','$ID',$IC)";
 	echo PHP_EOL;
 	echo $sql2;
 	$count = $db->exec($sql2);
-	/* Return number of rows that were deleted */
+//	/* Return number of rows that were deleted */
 	print("Insert $count rows.\n");
 }
-//******************************************************insertion code
-
+////******************************************************insertion code
+//
 // print out 
 $sql = "select * From $table";
 $stmt = $db->query($sql);
@@ -122,6 +127,7 @@ $Name= $row['Name'];
 $Manf= $row['Manf'];
 $Contents= $row['Contents'];
 $Effects= $row['Effects'];
+$Form = $row['Form'];
 $Dosage= $row['Dosage'];
 $Side_Effects= $row['Side_Effects'];
 $Schedule= $row['Schedule'];
@@ -135,6 +141,7 @@ echo "<td class='firstrow'>$Name</td>";
 echo "<td class='firstrow'>$Manf</td>";
 echo "<td class='firstrow'>$Contents</td>";
 echo "<td class='firstrow'>$Effects</td>";
+echo "<Td class='firstrow'>$Form</td>";
 echo "<td class='firstrow'>$Dosage</td>";
 echo "<td class='firstrow'>$Side_Effects</td>";
 echo "<td class='firstrow'>$Schedule</td>";
