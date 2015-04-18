@@ -7,7 +7,12 @@ session_start();
 //$value = $_GET['value'];
 $table ='PATIENT' ;
 $attribute = 'Patient_Id';
-$value = $_GET['value'];
+if(isset($_GET['value'])){$value = $_GET['value'];}
+else
+{
+	<form action = 'list.php'>
+	<label> "PLEASE ENTER VALID ID"<\label>;
+}
 ?>
 <title>List Page</title>
 </head>
