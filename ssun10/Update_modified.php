@@ -22,6 +22,7 @@ $table ='DIAGNOSIS' ;
 <INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "MI">
 <INPUT TYPE = "TEXT" VALUE ="Remark" NAME = "Remark">
 <INPUT TYPE = "TEXT" VALUE ="Second_Diag_Date" NAME = "SDD">
+<INPUT TYPE = "Submit" Name="Cancel" VALUE = "Cancel" onClick="window.location='http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/Insertion.php';">
 <INPUT TYPE = "Submit" Name = "Update" VALUE = "Update">
 </FORM>
 <!-- Insertion code -->
