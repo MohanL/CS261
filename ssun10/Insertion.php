@@ -22,6 +22,7 @@ $table ='DIAGNOSIS' ;
 <INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "MI">
 <INPUT TYPE = "TEXT" VALUE ="Remark" NAME = "Remark">
 <INPUT TYPE = "TEXT" VALUE ="Second_Diag_Date" NAME = "SDD">
+<input type="button" onclick="alert('Hello World!')" value="Cancel">
 <INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
 </FORM>
 <!-- Insertion code -->

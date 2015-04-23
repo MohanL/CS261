@@ -127,7 +127,7 @@ $IRemark = $_GET['Remark'];
 $ISDD = $_GET['SDD'];
 //****************************************
 	
-$sql2 = "UPDATE $table SET Patient_FName='$IPF', Patient_LName='$IPL',Patient_Id=$IPI,Staff_Id=$ISI,Diag_Details='$IDD',Severity=$ISeverity,Diag_Date='$IDDate',Med_Id=$IMI,Remark='$IRemark',Second_Diag_Date='$ISDD' WHERE Diag_Id=$IDI)";
+$sql2 = "UPDATE $table SET Patient_FName='$IPF', Patient_LName='$IPL',Patient_Id=$IPI,Staff_Id=$ISI,Diag_Details='$IDD',Severity=$ISeverity,Diag_Date='$IDDate',Med_Id=$IMI,Remark='$IRemark',Second_Diag_Date='$ISDD' WHERE Diag_Id=$IDI";
 echo PHP_EOL;
 echo $sql2;
 $count = $db->exec($sql2);
