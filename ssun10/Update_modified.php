@@ -79,31 +79,6 @@ if( (!isset($_GET['DI'])) || (!isset($_GET['PF'])) || (!isset($_GET['PL'])) || (
 }
 else
 {
-//**************************************
-// insertion into STAFF
-$IDI = $_GET['DI'];
-$IPF = $_GET['PF'];  
-$IPL = $_GET['PL'];
-$IPI = $_GET['PI'];
-$ISI = $_GET['SI'];
-$IDD = $_GET['DD'];
-$ISeverity = $_GET['Severity'];
-$IDDate = $_GET['DDate'];
-$IMI= $_GET['MI'];
-$IRemark = $_GET['Remark'];
-$ISDD = $_GET['SDD'];
-//****************************************
-	
-$sql2 = "UPDATE $table SET Patient_FName='$IPF', Patient_LName='$IPL',Patient_Id=$IPI,Staff_Id=$ISI,Diag_Details='$IDD',Severity=$ISeverity,Diag_Date='$IDDate',Med_Id=$IMI,Remark='$IRemark',Second_Diag_Date='$ISDD' WHERE Diag_Id=$IDI)";
-echo PHP_EOL;
-echo $sql2;
-$count = $db->exec($sql2);
-/* Return number of rows that were deleted */
-print("Update $count rows.\n");
-
-}
-//******************************************************insertion code
-// print out 
 $sql = "select * From $table";
 $stmt = $db->query($sql);
 foreach($stmt->fetchAll() as $row) {
@@ -137,6 +112,32 @@ echo "<td class='firstrow'><a href='list_supplementary.php?value=$Diag_Id'>$link
 </td>";
 echo "</tr>\n"; 
 }              
+//**************************************
+// insertion into STAFF
+$IDI = $_GET['DI'];
+$IPF = $_GET['PF'];  
+$IPL = $_GET['PL'];
+$IPI = $_GET['PI'];
+$ISI = $_GET['SI'];
+$IDD = $_GET['DD'];
+$ISeverity = $_GET['Severity'];
+$IDDate = $_GET['DDate'];
+$IMI= $_GET['MI'];
+$IRemark = $_GET['Remark'];
+$ISDD = $_GET['SDD'];
+//****************************************
+	
+$sql2 = "UPDATE $table SET Patient_FName='$IPF', Patient_LName='$IPL',Patient_Id=$IPI,Staff_Id=$ISI,Diag_Details='$IDD',Severity=$ISeverity,Diag_Date='$IDDate',Med_Id=$IMI,Remark='$IRemark',Second_Diag_Date='$ISDD' WHERE Diag_Id=$IDI)";
+echo PHP_EOL;
+echo $sql2;
+$count = $db->exec($sql2);
+/* Return number of rows that were deleted */
+print("Update $count rows.\n");
+
+}
+//******************************************************insertion code
+// print out 
+
 echo '</table>';
 
 ?>
