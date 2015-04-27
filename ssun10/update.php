@@ -187,11 +187,6 @@ print("Update $count rows.\n");}
 }
 $sql = "select * From $table";
 $stmt = $db->query($sql);
-$Diag_Id = $row['Diag_Id'];
-$Cancel='Cancel';
-echo "<td class='firstrow'><a href='show.php?value=$Diag_Id'>$Cancel</a>
-</div>
-</td>";
 foreach($stmt->fetchAll() as $row) {
 $Diag_Id = $row['Diag_Id'];
 $Patient_FName = $row['Patient_FName'];
