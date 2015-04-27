@@ -31,9 +31,16 @@ else	// do the thing
    <body>
 	<h2>list</h2>
 <FORM NAME ="form1" METHOD =" " ACTION = "">
-
 <INPUT TYPE = "TEXT" VALUE ="Diag_Id" NAME = "value">
 <INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
+</FORM>
+
+<FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/insertion.php">
+<INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
+</FORM>
+
+<FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/ieletion.php">
+<INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
 </FORM>
 <?php
 // connect to the database 
