@@ -84,7 +84,7 @@ echo '<tr>',
       "</tr>\n";
 
 // sql query formation
-echo '<i>,' "Query Generated:",'</i>';
+echo '<i>', "Query Generated:",'</i>';
 $sql = "select * from $table where $attribute = $value";
 echo PHP_EOL;
 echo $sql;
