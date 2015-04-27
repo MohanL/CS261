@@ -90,7 +90,6 @@ echo PHP_EOL;
 echo $sql;
 $stmt = $db->query( $sql );
 
-<br>
 // print out 
 foreach($stmt->fetchAll() as $row) {
 $Diag_Id = $row['Diag_Id'];
