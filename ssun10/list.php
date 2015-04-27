@@ -29,7 +29,7 @@ else	// do the thing
 </head>
 
    <body>
-	<h2>list</h2>
+	<h2 style="font-family:verdana">list</h2>
 <FORM NAME ="form1" METHOD =" " ACTION = "">
 <INPUT TYPE = "TEXT" VALUE ="Diag_Id" NAME = "value">
 <INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
