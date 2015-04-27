@@ -28,7 +28,7 @@ else	// do the thing
 <title>List Page</title>
 </head>
    <body style="background-color:pink">
-	<h2 style="font-family:verdana","color:grey">Welcome to the Diagnosis List Page</h2>
+	<h2 style="font-family:verdana">Welcome to the Diagnosis List Page</h2>
 <FORM ACTION=''>
 Diagnosis ID:<br>
 <INPUT TYPE = "TEXT" VALUE ="" NAME = "value">
@@ -67,7 +67,7 @@ catch (PDOException $e) {
 // print out information about the query
 echo '<p>','<i>','Query pull (ssun10) as of ', date("Y-m-d H:i:s"), '</i>','</p>';
 // print out format 
-echo '<table border ="1">';
+echo '<table border ="1" style="width:100%">';
 echo '<tr>',
 	    '<th>Diag_Id</th>',
 	    '<th>Patient_FName</th>',
@@ -90,7 +90,7 @@ echo PHP_EOL;
 echo $sql;
 $stmt = $db->query( $sql );
 
-
+<br>
 // print out 
 foreach($stmt->fetchAll() as $row) {
 $Diag_Id = $row['Diag_Id'];
