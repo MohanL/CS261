@@ -112,6 +112,7 @@ echo "<td class='firstrow'><a href='list_supplementary.php?value=$Diag_Id'>$link
 </div>
 </td>";
 echo "</tr>\n"; 
+echo '</table>';
 }              
 //**************************************
 // insertion into STAFF
