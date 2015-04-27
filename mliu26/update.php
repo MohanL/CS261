@@ -82,12 +82,13 @@ $IDI = $_GET['DI'];
 $IPI = $_GET['PI'];
 $IPT = $_GET['PT'];
 //****************************************
+/*
 	if(isset($_GET['LN'])&&$ILN!="Last_Name")
 	{	$sql2 = "update $table set Last_Name= '$ILN' where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;
 		$count = $db->exec($sql2);
-		/* Return number of rows that were deleted */
+		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
 	if(isset($_GET['FN'])&&$IFN!="First_Name")
@@ -95,7 +96,7 @@ $IPT = $_GET['PT'];
 		echo PHP_EOL;
 		echo $sql2;
 		$count = $db->exec($sql2);
-		/* Return number of rows that were deleted */
+		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
 	if(isset($_GET['G'])&&$IG!="Gender")
@@ -103,7 +104,7 @@ $IPT = $_GET['PT'];
 		echo PHP_EOL;
 		echo $sql2;
 		$count = $db->exec($sql2);
-		/* Return number of rows that were deleted */
+		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
 	if(isset($_GET['SSN'])&&$ISSN!="SSN")
@@ -111,7 +112,7 @@ $IPT = $_GET['PT'];
 		echo PHP_EOL;
 		echo $sql2;
 		$count = $db->exec($sql2);
-		/* Return number of rows that were deleted */
+		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
 	if(isset($_GET['HP'])&&$IHP!="Home_Phone")
@@ -119,7 +120,7 @@ $IPT = $_GET['PT'];
 		echo PHP_EOL;
 		echo $sql2;
 		$count = $db->exec($sql2);
-		/* Return number of rows that were deleted */
+		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
 	if(isset($_GET['MP'])&&$IMP!="Mobile_Phone")
@@ -134,7 +135,7 @@ $IPT = $_GET['PT'];
 		echo PHP_EOL;
 		echo $sql2;																																																																																																																																																																																																																			
 		$count = $db->exec($sql2);
-		/* Return number of rows that were deleted */
+		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
 	if(isset($_GET['DI'])&&$IMP!="Department_Id")
@@ -142,7 +143,7 @@ $IPT = $_GET['PT'];
 		echo PHP_EOL;
 		echo $sql2;																																																																																																																																																																																																																			
 		$count = $db->exec($sql2);
-		/* Return number of rows that were deleted */
+		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
 	if(isset($_GET['PI'])&&$IMP!="Position_Id")
@@ -150,7 +151,7 @@ $IPT = $_GET['PT'];
 		echo PHP_EOL;
 		echo $sql2;																																																																																																																																																																																																																			
 		$count = $db->exec($sql2);
-		/* Return number of rows that were deleted */
+		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
 	if(isset($_GET['PT'])&&$IMP!="Position_Title")
@@ -158,10 +159,11 @@ $IPT = $_GET['PT'];
 		echo PHP_EOL;
 		echo $sql2;																																																																																																																																																																																																																				
 		$count = $db->exec($sql2);
-		/* Return number of rows that were deleted */
+		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
 }
+*/
 //******************************************************insertion code
 // print out 
 $sql = "select * From $table";
