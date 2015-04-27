@@ -43,7 +43,7 @@ echo '<tr>',
 	    '<th>Gender</th>',
 	    '<th>Home_Phone</th>',
 	    '<th>Cell_Phone</th>',
-	    '<th>Emerg_Contact</th>',
+	    '<th>Emerg_Cont</th>',
 	    '<th>Birthday</th>',
 	    '<th>Allergies</th>',
 	    '<th>Surgical_History</th>',
@@ -89,7 +89,7 @@ $Last_Name = $row['Last_Name'];
 $Gender = $row['Gender'];
 $Home_Phone = $row['Home_Phone'];
 $Cell_Phone = $row['Cell_Phone'];
-$Emerg_Contact = $row['Emerg_Contact'];
+$Emerg_Cont = $row['Emerg_Cont'];
 $Birthday = $row['Birthday'];
 $Allergies = $row['Allergies'];
 $Surgical_History = $row['Surgical_History'];
@@ -107,7 +107,7 @@ echo "<td class='firstrow'>$Last_Name</td>";
 echo "<td class='firstrow'>$Gender</td>";
 echo "<td class='firstrow'>$Home_Phone</td>";
 echo "<td class='firstrow'>$Cell_Phone</td>";
-echo "<td class='firstrow'>$Emerg_Contact</td>";
+echo "<td class='firstrow'>$Emerg_Cont</td>";
 echo "<td class='firstrow'>$Birthday</td>";
 echo "<td class='firstrow'>$Allergies</td>";
 echo "<td class='firstrow'>$Surgical_History</td>";

@@ -17,7 +17,7 @@ $table ='PATIENT' ;
 <INPUT TYPE = "TEXT" VALUE ="Gender" NAME = "G">
 <INPUT TYPE = "TEXT" VALUE ="Home_Phone" NAME = "HP">
 <INPUT TYPE = "TEXT" VALUE ="Cell_Phone" NAME = "CP">
-<INPUT TYPE = "TEXT" VALUE ="Emerg_Contact" NAME = "EC">
+<INPUT TYPE = "TEXT" VALUE ="Emerg_Cont" NAME = "EC">
 <INPUT TYPE = "TEXT" VALUE ="Birthday" NAME = "BD">
 <INPUT TYPE = "TEXT" VALUE ="Allergies" NAME = "A">
 <INPUT TYPE = "TEXT" VALUE ="Surgical_History" NAME = "SH">
@@ -57,7 +57,7 @@ echo '<tr>',
 	    '<th>Gender</th>',
 	    '<th>Home_Phone</th>',
 	    '<th>Cell_Phone</th>',
-	    '<th>Emerg_Contact</th>',
+	    '<th>Emerg_Cont</th>',
 	    '<th>Birthday</th>',
 	    '<th>Allergies</th>',
 	    '<th>Surgical_History</th>',
@@ -78,7 +78,7 @@ if( (!isset($_GET['PI'])) || (!isset($_GET['FN'])) || (!isset($_GET['LN'])) || (
 	if (!isset($_GET['G'])) echo nl2br("\nERROR : need Patient Gender");
 	if (!isset($_GET['HP'])) echo nl2br("\nERROR : need Patient Home_Phone");
 	if (!isset($_GET['CP'])) echo nl2br("\nERROR : need Patient Cell_Phone");
-    if (!isset($_GET['EC'])) echo nl2br("\nERROR : need Patient Emerg_Contact");
+    if (!isset($_GET['EC'])) echo nl2br("\nERROR : need Patient Emerg_Cont");
 	if (!isset($_GET['BD'])) echo nl2br("\nERROR : need Patient Birthday");
 	if (!isset($_GET['A'])) echo nl2br("\nERROR : need Patient Allergies");
 	if (!isset($_GET['SH'])) echo nl2br("\nERROR : need Patient Surgical_History");
@@ -128,7 +128,7 @@ $Last_Name = $row['Last_Name'];
 $Gender = $row['Gender'];
 $Home_Phone = $row['Home_Phone'];
 $Cell_Phone = $row['Cell_Phone'];
-$Emerg_Contact = $row['Emerg_Contact'];
+$Emerg_Cont = $row['Emerg_Cont'];
 $Birthday = $row['Birthday'];
 $Allergies = $row['Allergies'];
 $Surgical_History = $row['Surgical_History'];
@@ -146,7 +146,7 @@ echo "<td class='firstrow'>$Last_Name</td>";
 echo "<td class='firstrow'>$Gender</td>";
 echo "<td class='firstrow'>$Home_Phone</td>";
 echo "<td class='firstrow'>$Cell_Phone</td>";
-echo "<td class='firstrow'>$Emerg_Contact</td>";
+echo "<td class='firstrow'>$Emerg_Cont</td>";
 echo "<td class='firstrow'>$Birthday</td>";
 echo "<td class='firstrow'>$Allergies</td>";
 echo "<td class='firstrow'>$Surgical_History</td>";
