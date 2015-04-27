@@ -20,18 +20,18 @@ else	// do the thing
 {
 	?>
 	<form action = "list.php">
-	<label>PLEASE ENTER VALID ID between 4000 to 5000</label>
+	<label><i>PLEASE ENTER VALID ID between 4000 to 5000</i></label>
 	</form>
 	<?php
 }
 ?>
 <title>List Page</title>
 </head>
-
    <body>
-	<h2 style="font-family:verdana">list</h2>
-<FORM NAME ="form1" METHOD =" " ACTION = "">
-<INPUT TYPE = "TEXT" VALUE ="Diag_Id" NAME = "value">
+	<h2 style="font-family:verdana">Welcome to the Diagnosis List Page</h2>
+<FORM ACTION=''>
+Diagnosis ID:<br>
+<INPUT TYPE = "TEXT" VALUE ="" NAME = "value">
 <INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
 </FORM>
 
