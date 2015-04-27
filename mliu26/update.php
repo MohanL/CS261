@@ -61,8 +61,8 @@ echo '<tr>',
 	    '<th> show</th>',
       "</tr>\n";
 //******************************************************insertion code
-echo nl2br("\nInsertion Query Generated:");
 /*
+echo nl2br("\nInsertion Query Generated:");
 if (!isset($_GET['SI'])) 
 {
 	echo nl2br("\nERROR : need Staff_Id");
@@ -198,7 +198,6 @@ echo "<td class='firstrow'><a href='list_supplementary.php?value=$Staff_Id'>$lin
 echo "</tr>\n"; 
 }              
 echo '</table>';
-
 ?>
     </body>
 </html>   
