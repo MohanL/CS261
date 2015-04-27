@@ -67,7 +67,7 @@ catch (PDOException $e) {
 // print out information about the query
 echo '<p>','<i>','Query pull (ssun10) as of ', date("Y-m-d H:i:s"), '</i>','</p>';
 // print out format 
-echo '<table border ="1" style="width:100%">';
+echo '<table border ="1">';
 echo '<tr>',
 	    '<th>Diag_Id</th>',
 	    '<th>Patient_FName</th>',
