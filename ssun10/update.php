@@ -189,7 +189,7 @@ $sql = "select * From $table";
 $stmt = $db->query($sql);
 $Diag_Id = $row['Diag_Id'];
 $Cancel='Cancel';
-echo "<td class='firstrow'><a href='show.php?value=$Diag_Id'>$link</a>
+echo "<td class='firstrow'><a href='show.php?value=$Diag_Id'>$Cancel</a>
 </div>
 </td>";
 foreach($stmt->fetchAll() as $row) {
