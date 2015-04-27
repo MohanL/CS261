@@ -63,7 +63,7 @@ echo '<tr>',
 //******************************************************insertion code
 
 echo nl2br("\nUpdate Query Generated:");
-if(!isset($_GET['SI'])) 
+if(!isset($_POST['SI'])) 
 {
 	echo nl2br("\nERROR : need Staff_Id");
 	echo nl2br("\nERROR : Query can't be completed because Staff_Id needed");
@@ -73,20 +73,20 @@ else{
 //**************************************
 // insertion into STAFF
 
-$ISI = $_GET['SI'];
-$IFN = $_GET['FN'];
-$ILN = $_GET['LN'];  
-$IG = $_GET['G'];
-$ISSN = $_GET['SSN'];
-$IHP = $_GET['HP'];
-$IMP = $_GET['MP'];
-$IE = $_GET['E'];
-$IDI = $_GET['DI'];
-$IPI = $_GET['PI'];
-$IPT = $_GET['PT'];
+$ISI = $_POST['SI'];
+$IFN = $_POST['FN'];
+$ILN = $_POST['LN'];  
+$IG = $_POST['G'];
+$ISSN = $_POST['SSN'];
+$IHP = $_POST['HP'];
+$IMP = $_POST['MP'];
+$IE = $_POST['E'];
+$IDI = $_POST['DI'];
+$IPI = $_POST['PI'];
+$IPT = $_POST['PT'];
 
 //****************************************
-	if(isset($_GET['LN'])&&($ILN!="Last_Name"))
+	if(isset($_POST['LN'])&&($ILN!="Last_Name"))
 	{	$sql2 = "update $table set Last_Name= '$ILN' where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;
@@ -94,7 +94,7 @@ $IPT = $_GET['PT'];
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['FN'])&&($IFN!="First_Name"))
+	if(isset($_POST['FN'])&&($IFN!="First_Name"))
 	{	$sql2 = "update $table set First_Name= '$IFN' where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;
@@ -102,7 +102,7 @@ $IPT = $_GET['PT'];
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['G'])&&($IG!="Gender"))
+	if(isset($_POST['G'])&&($IG!="Gender"))
 	{	$sql2 = "update $table set Gender= $IG where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;
@@ -110,7 +110,7 @@ $IPT = $_GET['PT'];
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['SSN'])&&($ISSN!="SSN"))
+	if(isset($_POST['SSN'])&&($ISSN!="SSN"))
 	{	$sql2 = "update $table set SSN= $ISSN where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;
@@ -118,7 +118,7 @@ $IPT = $_GET['PT'];
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['HP'])&&($IHP!="Home_Phone"))
+	if(isset($_POST['HP'])&&($IHP!="Home_Phone"))
 	{	$sql2 = "update $table set Home_Phone= $IHP where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;
@@ -126,35 +126,35 @@ $IPT = $_GET['PT'];
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['MP'])&&($IMP!="Mobile_Phone"))
+	if(isset($_POST['MP'])&&($IMP!="Mobile_Phone"))
 	{	$sql2 = "update $table set Mobile_Phone= $IMP where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;				
 		$count = $db->exec($sql2);
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['E'])&&($IE!="Email"))
+	if(isset($_POST['E'])&&($IE!="Email"))
 	{	$sql2 = "update $table set Email='$IE' where Staff_Id = $ISI";
 		echo PHP_EOL;
 		$count = $db->exec($sql2);
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['DI'])&&($IDI!="Department_Id"))
+	if(isset($_POST['DI'])&&($IDI!="Department_Id"))
 	{	$sql2 = "update $table set Department_Id= $IDI where Staff_Id = $ISI";
 		echo PHP_EOL;
 		$count = $db->exec($sql2);
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['PI'])&&($IPI!="Position_Id"))
+	if(isset($_POST['PI'])&&($IPI!="Position_Id"))
 	{	$sql2 = "update $table set Position_Id= $IPI where Staff_Id = $ISI";
 		echo PHP_EOL;
 		$count = $db->exec($sql2);
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['PT'])&&($IPT!="Position_Title"))
+	if(isset($_POST['PT'])&&($IPT!="Position_Title"))
 	{	$sql2 = "update $table set Position_Title= $IPT where Staff_Id = $ISI";
 		echo PHP_EOL;
 		$count = $db->exec($sql2);
