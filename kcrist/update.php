@@ -88,41 +88,6 @@ if( (!isset($_POST['Med_Id'])) || (!isset($_POST['Name'])) || (!isset($_POST['Ma
 }
 else
 {
-// print out 
-$sql = "select * From $table";
-$stmt = $db->query($sql);
-foreach($stmt->fetchAll() as $row) {
-$Med_Id= $row['Med_Id'];
-$Name= $row['Name'];
-$Manf= $row['Manf'];
-$Contents= $row['Contents'];
-$Effects= $row['Effects'];
-$Form = $row['Form'];
-$Dosage= $row['Dosage'];
-$Side_Effects= $row['Side_Effects'];
-$Schedule= $row['Schedule'];
-$Description= $row['Description'];
-$Cost= $row['Cost'];
-$show= 'show';
-
-// make the entry listing the team span across n+1 rows, where n = size of the team
-echo '<tr>';
-echo "<td class='firstrow'>$Med_Id</td>";
-echo "<td class='firstrow'>$Name</td>";
-echo "<td class='firstrow'>$Manf</td>";
-echo "<td class='firstrow'>$Contents</td>";
-echo "<td class='firstrow'>$Effects</td>";
-echo "<Td class='firstrow'>$Form</td>";
-echo "<td class='firstrow'>$Dosage</td>";
-echo "<td class='firstrow'>$Side_Effects</td>";
-echo "<td class='firstrow'>$Schedule</td>";
-echo "<td class='firstrow'>$Description</td>";
-echo "<td class='firstrow'>$Cost</td>";
-echo "<td class='firstrow'><a href='list_supplementary.php?value=$Med_Id'>$show</a>
-</div>                      
-</td>"; 
-echo "</tr>\n"; 
-}              
 //**************************************
 // insertion into med
 //// insertion into MED
@@ -212,6 +177,40 @@ print("Update $count rows.\n");}
 }
 //******************************************************insertion code
 // print out 
+// print out 
+$sql = "select * From $table";
+$stmt = $db->query($sql);
+foreach($stmt->fetchAll() as $row) {
+$Med_Id= $row['Med_Id'];
+$Name= $row['Name'];
+$Manf= $row['Manf'];
+$Contents= $row['Contents'];
+$Effects= $row['Effects'];
+$Form = $row['Form'];
+$Dosage= $row['Dosage'];
+$Side_Effects= $row['Side_Effects'];
+$Schedule= $row['Schedule'];
+$Description= $row['Description'];
+$Cost= $row['Cost'];
+$show= 'show';
+
+// make the entry listing the team span across n+1 rows, where n = size of the team
+echo '<tr>';
+echo "<td class='firstrow'>$Med_Id</td>";
+echo "<td class='firstrow'>$Name</td>";
+echo "<td class='firstrow'>$Manf</td>";
+echo "<td class='firstrow'>$Contents</td>";
+echo "<td class='firstrow'>$Effects</td>";
+echo "<Td class='firstrow'>$Form</td>";
+echo "<td class='firstrow'>$Dosage</td>";
+echo "<td class='firstrow'>$Side_Effects</td>";
+echo "<td class='firstrow'>$Schedule</td>";
+echo "<td class='firstrow'>$Description</td>";
+echo "<td class='firstrow'>$Cost</td>";
+echo "<td class='firstrow'><a href='list_supplementary.php?value=$Med_Id'>$show</a>
+</div>                      
+</td>"; 
+echo "</tr>\n"; 
 echo '</table>';
 ?>
     </body>
