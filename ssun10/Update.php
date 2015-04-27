@@ -22,6 +22,7 @@ $table ='DIAGNOSIS' ;
 <INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "MI">
 <INPUT TYPE = "TEXT" VALUE ="Remark" NAME = "Remark">
 <INPUT TYPE = "TEXT" VALUE ="Second_Diag_Date" NAME = "SDD">
+<INPUT TYPE = "Submit" Name="Cancel" VALUE = "Cancel" onClick="window.location='http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/Insertion.php';">
 <INPUT TYPE = "Submit" Name = "Update" VALUE = "Update">
 </FORM>
 <!-- Insertion code -->
@@ -79,31 +80,6 @@ if( (!isset($_GET['DI'])) || (!isset($_GET['PF'])) || (!isset($_GET['PL'])) || (
 }
 else
 {
-//**************************************
-// insertion into STAFF
-$IDI = $_GET['DI'];
-$IPF = $_GET['PF'];  
-$IPL = $_GET['PL'];
-$IPI = $_GET['PI'];
-$ISI = $_GET['SI'];
-$IDD = $_GET['DD'];
-$ISeverity = $_GET['Severity'];
-$IDDate = $_GET['DDate'];
-$IMI= $_GET['MI'];
-$IRemark = $_GET['Remark'];
-$ISDD = $_GET['SDD'];
-//****************************************
-	
-$sql2 = "UPDATE $table SET $PF='$IPF', $PL='$IPL',$PI=$IPI,$SI=$ISI,$DD='$IDD',$Severity=$ISeverity,$DDate='$IDDate',$MI=$IMI,$Remark='$IRemark',$SDD='$ISDD' WHERE $DI=$IDI)";
-echo PHP_EOL;
-echo $sql2;
-$count = $db->exec($sql2);
-/* Return number of rows that were deleted */
-print("Update $count rows.\n");
-
-}
-//******************************************************insertion code
-// print out 
 $sql = "select * From $table";
 $stmt = $db->query($sql);
 foreach($stmt->fetchAll() as $row) {
@@ -137,6 +113,115 @@ echo "<td class='firstrow'><a href='list_supplementary.php?value=$Diag_Id'>$link
 </td>";
 echo "</tr>\n"; 
 }              
+//**************************************
+// insertion into STAFF
+$IDI = $_GET['DI'];
+$IPF = $_GET['PF'];  
+$IPL = $_GET['PL'];
+$IPI = $_GET['PI'];
+$ISI = $_GET['SI'];
+$IDD = $_GET['DD'];
+$ISeverity = $_GET['Severity'];
+$IDDate = $_GET['DDate'];
+$IMI= $_GET['MI'];
+$IRemark = $_GET['Remark'];
+$ISDD = $_GET['SDD'];
+//****************************************
+	
+if((isset($_GET['PF'])) && ($IPF != 'Patient_FName')){
+
+$sql2 = "UPDATE $table SET Patient_FName='$IPF' WHERE Diag_Id=$IDI";
+echo PHP_EOL;
+echo $sql2;
+$count = $db->exec($sql2);
+/* Return number of rows that were deleted */
+print("Update $count rows.\n");}
+
+if ((isset($_GET['PL'])) && ($IPL != 'Patient_LName')){
+
+$sql2 = "UPDATE $table SET Patient_LName='$IPL' WHERE Diag_Id=$IDI";
+echo PHP_EOL;
+echo $sql2;
+$count = $db->exec($sql2);
+/* Return number of rows that were deleted */
+print("Update $count rows.\n");}
+
+if ((isset($_GET['PI'])) && ($IPI != Patient_Id)){
+
+$sql2 = "UPDATE $table SET Patient_Id='$IPI' WHERE Diag_Id=$IDI";
+echo PHP_EOL;
+echo $sql2;
+$count = $db->exec($sql2);
+/* Return number of rows that were deleted */
+print("Update $count rows.\n");}
+
+if ((isset($_GET['SI'])) && ($ISI != Staff_Id)){
+
+$sql2 = "UPDATE $table SET Staff_Id='$ISI' WHERE Diag_Id=$IDI";
+echo PHP_EOL;
+echo $sql2;
+$count = $db->exec($sql2);
+/* Return number of rows that were deleted */
+print("Update $count rows.\n");}
+
+if ((isset($_GET['DD'])) && ($IDD != 'Diag_Details')){
+
+$sql2 = "UPDATE $table SET Diag_Details='$IDD' WHERE Diag_Id=$IDI";
+echo PHP_EOL;
+echo $sql2;
+$count = $db->exec($sql2);
+/* Return number of rows that were deleted */
+print("Update $count rows.\n");}
+
+if ((isset($_GET['Severity'])) && ($ISeverity != 'Severity')){
+
+$sql2 = "UPDATE $table SET Severity='$ISeverity' WHERE Diag_Id=$IDI";
+echo PHP_EOL;
+echo $sql2;
+$count = $db->exec($sql2);
+/* Return number of rows that were deleted */
+print("Update $count rows.\n");}
+
+if ((isset($_GET['DDate'])) && ($IDDate != 'Diag_Date')){
+
+$sql2 = "UPDATE $table SET Diag_Date='$IDDate' WHERE Diag_Id=$IDI";
+echo PHP_EOL;
+echo $sql2;
+$count = $db->exec($sql2);
+/* Return number of rows that were deleted */
+print("Update $count rows.\n");}
+
+if ((isset($_GET['MI'])) && ($IMI != 'Med_Id')){
+
+$sql2 = "UPDATE $table SET Med_Id='$IMI' WHERE Diag_Id=$IDI";
+echo PHP_EOL;
+echo $sql2;
+$count = $db->exec($sql2);
+/* Return number of rows that were deleted */
+print("Update $count rows.\n");}
+
+if ((isset($_GET['Remark'])) && ($IRemark != 'Remark')){
+
+$sql2 = "UPDATE $table SET Remark='$IRemark' WHERE Diag_Id=$IDI";
+echo PHP_EOL;
+echo $sql2;
+$count = $db->exec($sql2);
+/* Return number of rows that were deleted */
+print("Update $count rows.\n");}
+
+if ((isset($_GET['SDD'])) && ($ISDD != 'Second_Diag_Date')){
+
+$sql2 = "UPDATE $table SET Second_Diag_Date='$ISDD' WHERE Diag_Id=$IDI";
+echo PHP_EOL;
+echo $sql2;
+$count = $db->exec($sql2);
+/* Return number of rows that were deleted */
+print("Update $count rows.\n");}
+
+}
+//******************************************************insertion code
+// print out 
+
 echo '</table>';
 
 ?>
