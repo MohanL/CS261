@@ -10,7 +10,7 @@ $table ='PATIENT' ;
    <body>
 	<h2>Deletion</h2>
 <!-- Insertion code -->
-<FORM NAME = "form2" METHOD =" " ACTION = "">
+<FORM NAME = "form2" METHOD ="post" ACTION = "">
 <INPUT TYPE = "TEXT" VALUE ="Patient_Id" NAME = "PI">
 <INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
 </FORM>
@@ -56,16 +56,16 @@ echo '<tr>',
       "</tr>\n";
 //******************************************************insertion code
 echo nl2br("\nInsertion Query Generated:");
-if(!isset($_GET['PI']) )
+if(!isset($_POST['PI']) )
 {
-	if (!isset($_GET['PI'])) echo nl2br("\nERROR : need Patient_Id");
+	if (!isset($_POST['PI'])) echo nl2br("\nERROR : need Patient_Id");
 	echo nl2br("\nERROR : Deletion incomplete");
 }
 else
 {
 //**************************************
 // insertion into PATIENT
-$IDI = $_GET['PI'];
+$IDI = $_POST['PI'];
 //****************************************
 	
 	if($IDI != 'Patient_Id')
@@ -89,7 +89,7 @@ $Last_Name = $row['Last_Name'];
 $Gender = $row['Gender'];
 $Home_Phone = $row['Home_Phone'];
 $Cell_Phone = $row['Cell_Phone'];
-$Emerg_Cont = $row['Emerg_Cont'];
+$Emerg_Cont = $row['Emerg_Contact'];
 $Birthday = $row['Birthday'];
 $Allergies = $row['Allergies'];
 $Surgical_History = $row['Surgical_History'];

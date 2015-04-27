@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <?php
 session_start();
-//$table = $_GET['table'];
-//$attribute = $_GET['attribute'];
-//$value = $_GET['value'];
+//$table = $_POST['table'];
+//$attribute = $_POST['attribute'];
+//$value = $_POST['value'];
 $table ='MEDICATION' ;
 ?>
 
@@ -14,7 +14,7 @@ $table ='MEDICATION' ;
    <body>
 	<h2>Insertion</h2>
 <!-- Insertion code -->
-<FORM NAME = "form2" METHOD ="POST" ACTION = "">
+<FORM NAME = "form2" METHOD ="post " ACTION = "">
 Med ID:<INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "Med_Id">
 <br><br>
 Name:<INPUT TYPE = "TEXT" VALUE ="Name" NAME = "Name">

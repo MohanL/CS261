@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <?php
 session_start();
-//$table = $_GET['table'];
-//$attribute = $_GET['attribute'];
-//$value = $_GET['value'];
+//$table = $_POST['table'];
+//$attribute = $_POST['attribute'];
+//$value = $_POST['value'];
 $table ='MEDICATION' ;
 ?>
 
@@ -14,7 +14,7 @@ $table ='MEDICATION' ;
    <body>
 	<h2>Deletion</h2>
 <!-- Insertion code -->
-<FORM NAME = "form2" METHOD ="POST" ACTION = "">
+<FORM NAME = "form2" METHOD ="post " ACTION = "">
 Med ID:<INPUT TYPE = "TEXT" VALUE =" " NAME = "Med_Id">
 <br><br>
 <INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
@@ -56,16 +56,16 @@ echo '<tr>',
 	    '<th>show</th>',
       "</tr>\n";
 
-if(!isset($_GET['Med_Id']) )
+if(!isset($_POST['Med_Id']) )
 {
-	if (!isset($_GET['Med_Id'])) echo nl2br("\nERROR : need Med_Id");
+	if (!isset($_POST['Med_Id'])) echo nl2br("\nERROR : need Med_Id");
 	echo nl2br("\nERROR : Deletion incomplete");
 }
 else
 {
 //**************************************
 // insertion into STAFF
-$ISI = $_GET['Med_Id'];
+$ISI = $_POST['Med_Id'];
 //****************************************
 	
 	// change to deletion 
