@@ -107,10 +107,10 @@ $IF = $_POST['Form'];
 $ID = $_POST['Dosage'];
 $ISE = $_POST['Side_Effects'];
 $IS = $_POST['Schedule'];
-$ID = $_POST['Description'];
+$IDS = $_POST['Description'];
 $IC = $_POST['Cost'];
 ////****************************************
-	$sql2 = "insert into MEDICATION values($IMI,'$IN', '$IM','$IC','$IE','$IF','$ID','$ISE','$IS','$ID',$IC)";
+	$sql2 = "insert into MEDICATION values($IMI,'$IN', '$IM','$IC','$IE','$IF','$ID','$ISE','$IS','$IDS',$IC)";
 	echo PHP_EOL;
 	echo $sql2;
 	$count = $db->exec($sql2);
