@@ -31,8 +31,7 @@ else	// do the thing
 	<h2 style="font-family:verdana">Welcome to the Diagnosis List Page</h2>
 <FORM ACTION=''>
 Diagnosis ID:<br>
-<INPUT TYPE = "TEXT" VALUE ="Diag_Id" NAME = "value">
-<br>
+<INPUT TYPE = "TEXT" VALUE ="" NAME = "value">
 <INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
 </FORM>
 
