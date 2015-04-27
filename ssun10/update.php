@@ -202,7 +202,8 @@ $Second_Diag_Date = $row['Second_Diag_Date'];
 $link = 'show';
 $Cancel='Cancel';
 echo '<tr>';
-echo "<a href='show.php?value=$Diag_Id'>$Cancel</a>";
+echo '<a href='show.php?value=$Diag_Id'>$Cancel</a>';
+
 // make the entry listing the team span across n+1 rows, where n = size of the team
 echo "<td class='firstrow'>$Diag_Id</td>";
 echo "<td class='firstrow'>$Patient_FName</td>";
