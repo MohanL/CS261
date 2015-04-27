@@ -27,7 +27,7 @@ else	// do the thing
 ?>
 <title>List Page</title>
 </head>
-   <body>
+   <body style="background-color:lightgrey">
 	<h2 style="font-family:verdana">Welcome to the Diagnosis List Page</h2>
 <FORM ACTION=''>
 Diagnosis ID:<br>
@@ -84,7 +84,7 @@ echo '<tr>',
       "</tr>\n";
 
 // sql query formation
-echo "Query Generated:";
+echo '<i>,' "Query Generated:",'</i>';
 $sql = "select * from $table where $attribute = $value";
 echo PHP_EOL;
 echo $sql;
