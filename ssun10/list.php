@@ -35,13 +35,6 @@ Diagnosis ID:<br>
 <INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
 </FORM>
 
-<FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/insertion.php">
-<INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
-</FORM>
-
-<FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/deletion.php">
-<INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
-</FORM>
 <?php
 // connect to the database 
 $dbtype = 'mysql';
@@ -119,5 +112,16 @@ echo "</tr>\n";
 }              
 echo '</table>';
 ?>
+
+<FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/insertion.php">
+Click here to the Insertion Page
+<INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
+</FORM>
+
+<FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/deletion.php">
+Click here to the Deletion Page
+<INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
+</FORM>
+
     </body>
 </html>   
