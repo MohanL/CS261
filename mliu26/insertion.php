@@ -10,7 +10,7 @@ $table ='STAFF' ;
    <body>
 	<h2>Insertion</h2>
 <!-- Insertion code -->
-<FORM NAME = "form2" METHOD =" " ACTION = "">
+<FORM NAME = "form2" METHOD ="post" ACTION = "">
 <INPUT TYPE = "TEXT" VALUE ="Staff_Id" NAME = "SI">
 <INPUT TYPE = "TEXT" VALUE ="First_Name" NAME = "FN">
 <INPUT TYPE = "TEXT" VALUE ="Last_Name" NAME = "LN">
@@ -62,36 +62,36 @@ echo '<tr>',
       "</tr>\n";
 //******************************************************insertion code
 echo nl2br("\nInsertion Query Generated:");
-if( (!isset($_GET['SI'])) || (!isset($_GET['FN'])) || (!isset($_GET['LN'])) || (!isset($_GET['G'])) || (!isset($_GET['SSN'])) || (!isset($_GET['HP'])) || (!isset($_GET['MP'])) || (!isset($_GET['E'])) || (!isset($_GET['DI']))|| (!isset($_GET['PI'])) || (!isset($_GET['PT'])))
+if( (!isset($_POST['SI'])) || (!isset($_POST['FN'])) || (!isset($_POST['LN'])) || (!isset($_POST['G'])) || (!isset($_POST['SSN'])) || (!isset($_POST['HP'])) || (!isset($_POST['MP'])) || (!isset($_POST['E'])) || (!isset($_POST['DI']))|| (!isset($_POST['PI'])) || (!isset($_POST['PT'])))
 {
-	if (!isset($_GET['SI'])) echo nl2br("\nERROR : need Staff_Id");
-	if (!isset($_GET['FN'])) echo nl2br("\nERROR : need Staff First_Name");
-	if (!isset($_GET['LN'])) echo nl2br("\nERROR : need Staff Last_Name");
-	if (!isset($_GET['G'])) echo nl2br("\nERROR : need Staff Gender");
-	if (!isset($_GET['SSN'])) echo nl2br("\nERROR : need Staff SSN");
-	if (!isset($_GET['HP'])) echo nl2br("\nERROR : need Staff Home_Phone");
-	if (!isset($_GET['MP'])) echo nl2br("\nERROR : need Staff Mobile_Phone");
-	if (!isset($_GET['E'])) echo nl2br("\nERROR : need Staff Email address");
-	if (!isset($_GET['DI'])) echo nl2br("\nERROR : need Staff Department_Id");
-	if (!isset($_GET['PI'])) echo nl2br("\nERROR : need Staff Position_Id");
-	if (!isset($_GET['PT'])) echo nl2br("\nERROR : need Staff Position_Title");
+	if (!isset($_POST['SI'])) echo nl2br("\nERROR : need Staff_Id");
+	if (!isset($_POST['FN'])) echo nl2br("\nERROR : need Staff First_Name");
+	if (!isset($_POST['LN'])) echo nl2br("\nERROR : need Staff Last_Name");
+	if (!isset($_POST['G'])) echo nl2br("\nERROR : need Staff Gender");
+	if (!isset($_POST['SSN'])) echo nl2br("\nERROR : need Staff SSN");
+	if (!isset($_POST['HP'])) echo nl2br("\nERROR : need Staff Home_Phone");
+	if (!isset($_POST['MP'])) echo nl2br("\nERROR : need Staff Mobile_Phone");
+	if (!isset($_POST['E'])) echo nl2br("\nERROR : need Staff Email address");
+	if (!isset($_POST['DI'])) echo nl2br("\nERROR : need Staff Department_Id");
+	if (!isset($_POST['PI'])) echo nl2br("\nERROR : need Staff Position_Id");
+	if (!isset($_POST['PT'])) echo nl2br("\nERROR : need Staff Position_Title");
 	echo nl2br("\nERROR : Insertion incomplete");
 }
 else
 {
 //**************************************
 // insertion into STAFF
-$ISI = $_GET['SI'];
-$ILN = $_GET['LN'];  
-$IFN = $_GET['FN'];
-$IG = $_GET['G'];
-$ISSN = $_GET['SSN'];
-$IHP = $_GET['HP'];
-$IMP = $_GET['MP'];
-$IE = $_GET['E'];
-$IDI = $_GET['DI'];
-$IPI = $_GET['PI'];
-$IPT = $_GET['PT'];
+$ISI = $_POST['SI'];
+$ILN = $_POST['LN'];  
+$IFN = $_POST['FN'];
+$IG = $_POST['G'];
+$ISSN = $_POST['SSN'];
+$IHP = $_POST['HP'];
+$IMP = $_POST['MP'];
+$IE = $_POST['E'];
+$IDI = $_POST['DI'];
+$IPI = $_POST['PI'];
+$IPT = $_POST['PT'];
 //****************************************
 	$sql2 = "insert into $table values($ISI,'$ILN', '$IFN',$IG,$ISSN,$IHP,$IMP,'$IE',$IDI,$IPI,'$IPT')";
 	echo PHP_EOL;
