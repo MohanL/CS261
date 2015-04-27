@@ -94,8 +94,8 @@ else
 //**************************************
 // insertion into PATIENT
 $IPI = $_POST['PI'];
-$ILN = $_POST['FN'];  
-$IFN = $_POST['LN'];
+$IFN = $_POST['FN'];  
+$ILN = $_POST['LN'];
 $IG = $_POST['G'];
 $IHP = $_POST['HP'];
 $ICP = $_POST['CP'];
