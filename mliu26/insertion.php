@@ -82,8 +82,8 @@ else
 //**************************************
 // insertion into STAFF
 $ISI = $_POST['SI'];
-$ILN = $_POST['LN'];  
-$IFN = $_POST['FN'];
+$IFN = $_POST['FN'];  
+$ILN = $_POST['LN'];
 $IG = $_POST['G'];
 $ISSN = $_POST['SSN'];
 $IHP = $_POST['HP'];
@@ -93,7 +93,7 @@ $IDI = $_POST['DI'];
 $IPI = $_POST['PI'];
 $IPT = $_POST['PT'];
 //****************************************
-	$sql2 = "insert into $table values($ISI,'$ILN', '$IFN',$IG,$ISSN,$IHP,$IMP,'$IE',$IDI,$IPI,'$IPT')";
+	$sql2 = "insert into $table values($ISI,'$IFN', '$ILN',$IG,$ISSN,$IHP,$IMP,'$IE',$IDI,$IPI,'$IPT')";
 	echo PHP_EOL;
 	echo $sql2;
 	$count = $db->exec($sql2);

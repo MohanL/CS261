@@ -94,8 +94,8 @@ else
 //**************************************
 // insertion into PATIENT
 $IPI = $_POST['PI'];
-$ILN = $_POST['LN'];  
-$IFN = $_POST['FN'];
+$ILN = $_POST['FN'];  
+$IFN = $_POST['LN'];
 $IG = $_POST['G'];
 $IHP = $_POST['HP'];
 $ICP = $_POST['CP'];
@@ -109,7 +109,7 @@ $II = $_POST['I'];
 $IMI = $_POST['MI'];
 $IR = $_POST['R'];
 //****************************************
-	$sql2 = "insert into $table values($IPI,'$ILN', '$IFN',$IG,$IHP,$ICP,'$IB',$IEC,'$IA','$ISH','$IVD',$ISI,'$II',$IMI,'$IR')";
+	$sql2 = "insert into $table values($IPI,'$IFN', '$ILN',$IG,$IHP,$ICP,'$IB',$IEC,'$IA','$ISH','$IVD',$ISI,'$II',$IMI,'$IR')";
 	echo PHP_EOL;
 	echo $sql2;
 	$count = $db->exec($sql2);
