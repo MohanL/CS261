@@ -10,7 +10,7 @@ $table ='STAFF' ;
    <body>
 	<h2>Update</h2>
 <!-- Insertion code -->
-<FORM NAME = "form2" METHOD =" " ACTION = "">
+<FORM NAME = "form2" METHOD ="post" ACTION = "">
 <INPUT TYPE = "TEXT" VALUE ="Staff_Id" NAME = "SI">
 <INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
 </FORM>
@@ -52,16 +52,16 @@ echo '<tr>',
       "</tr>\n";
 //******************************************************insertion code
 echo nl2br("\nInsertion Query Generated:");
-if(!isset($_GET['SI']) )
+if(!isset($_POST['SI']) )
 {
-	if (!isset($_GET['SI'])) echo nl2br("\nERROR : need Staff_Id");
+	if (!isset($_POST['SI'])) echo nl2br("\nERROR : need Staff_Id");
 	echo nl2br("\nERROR : Deletion incomplete");
 }
 else
 {
 //**************************************
 // insertion into STAFF
-$ISI = $_GET['SI'];
+$ISI = $_POST['SI'];
 //****************************************
 	
 	// change to deletion 
