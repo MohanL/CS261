@@ -16,6 +16,12 @@ $value = $_GET['value'];
 
    <body>
 	<h2>Show</h2>
+<!-- Insertion code -->
+<FORM NAME = "form2" METHOD =" " ACTION = "">
+<INPUT TYPE = "Submit" Name = "Update" VALUE = "Update"
+onclick="window.location.href='http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/update.php'" />
+</FORM>
+<!-- Insertion code -->
 <?php
 // connect to the database 
 $dbtype = 'mysql';
