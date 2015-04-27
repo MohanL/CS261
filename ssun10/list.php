@@ -39,7 +39,7 @@ else	// do the thing
 <INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
 </FORM>
 
-<FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/ieletion.php">
+<FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/deletion.php">
 <INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
 </FORM>
 <?php
