@@ -35,13 +35,14 @@ Diagnosis ID:<br>
 <INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
 </FORM>
 
-
+<br>
 
 <FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/insertion.php">
 Click here to the Insertion Page
 <INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
 </FORM>
 
+<br>
 <FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/ssun10/deletion.php">
 Click here to the Deletion Page
 <INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
