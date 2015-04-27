@@ -62,7 +62,7 @@ echo '<tr>',
       "</tr>\n";
 //******************************************************insertion code
 echo nl2br("\nInsertion Query Generated:");
-
+/*
 if (!isset($_GET['SI'])) echo nl2br("\nERROR : need Staff_Id");
 {
 	echo nl2br("\nERROR : Query can't be completed because Staff_Id needed");
@@ -160,7 +160,7 @@ $IPT = $_GET['PT'];
 	}
  */	
 }
-
+/*
 //******************************************************insertion code
 // print out 
 $sql = "select * From $table";
