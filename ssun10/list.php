@@ -25,7 +25,7 @@ else	// do the thing
 	<?php
 }
 ?>
-<title>List Page</title>
+<title style="font-family:verdana">List Page</title>
 </head>
 
    <body>
