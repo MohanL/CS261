@@ -113,7 +113,7 @@ $count = $db->exec($sql2);
 /* Return number of rows that were deleted */
 print("Update $count rows.\n");}
 
-if ((isset($_GET['PI'])) && ($IPI != Patient_Id)){
+if ((isset($_GET['PI'])) && ($IPI != 'Patient_Id')){
 
 $sql2 = "UPDATE $table SET Patient_Id=$IPI WHERE Diag_Id=$IDI";
 echo PHP_EOL;
@@ -122,7 +122,7 @@ $count = $db->exec($sql2);
 /* Return number of rows that were deleted */
 print("Update $count rows.\n");}
 
-if ((isset($_GET['SI'])) && ($ISI != Staff_Id)){
+if ((isset($_GET['SI'])) && ($ISI != 'Staff_Id')){
 
 $sql2 = "UPDATE $table SET Staff_Id=$ISI WHERE Diag_Id=$IDI";
 echo PHP_EOL;
