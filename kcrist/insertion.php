@@ -78,19 +78,19 @@ echo '<tr>',
 
 //******************************************************insertion code
 echo nl2br("\nInsertion Query Generated:");
-if( (!isset($_GET['Med_Id'])) || (!isset($_GET['Name'])) || (!isset($_GET['Manf'])) || (!isset($_GET['Form'])) || (!isset($_GET['Contents'])) || (!isset($_GET['Effects'])) || (!isset($_GET['Dosage'])) || (!isset($_GET['Side_Effects'])) || (!isset($_GET['Schedule'])) || (!isset($_GET['Description']))|| (!isset($_GET['Cost'])))
+if( (!isset($_POST['Med_Id'])) || (!isset($_POST['Name'])) || (!isset($_POST['Manf'])) || (!isset($_POST['Form'])) || (!isset($_POST['Contents'])) || (!isset($_POST['Effects'])) || (!isset($_POST['Dosage'])) || (!isset($_POST['Side_Effects'])) || (!isset($_POST['Schedule'])) || (!isset($_POST['Description']))|| (!isset($_POST['Cost'])))
 {
-	if (!isset($_GET['Med_Id'])) echo nl2br("\nERROR : need Med_Id");
-	if (!isset($_GET['Name'])) echo nl2br("\nERROR : need Medicine Name");
-	if (!isset($_GET['Manf'])) echo nl2br("\nERROR : need Medicine Manufacturer");
-	if (!isset($_GET['Contents'])) echo nl2br("\nERROR : need Medicine Contents");
-	if (!isset($_GET['Effects'])) echo nl2br("\nERROR : need Effects");
-	if (!isset($_GET['Form'])) echo nl2br("\nERROR : need Form");
-	if (!isset($_GET['Dosage'])) echo nl2br("\nERROR : need Dosage");
-	if (!isset($_GET['Side_Effects'])) echo nl2br("\nERROR : need Side Effects");
-	if (!isset($_GET['Schedule'])) echo nl2br("\nERROR : need Schedule");
-	if (!isset($_GET['Description'])) echo nl2br("\nERROR : need Description");
-	if (!isset($_GET['Cost'])) echo nl2br("\nERROR : need Cost");
+	if (!isset($_POST['Med_Id'])) echo nl2br("\nERROR : need Med_Id");
+	if (!isset($_POST['Name'])) echo nl2br("\nERROR : need Medicine Name");
+	if (!isset($_POST['Manf'])) echo nl2br("\nERROR : need Medicine Manufacturer");
+	if (!isset($_POST['Contents'])) echo nl2br("\nERROR : need Medicine Contents");
+	if (!isset($_POST['Effects'])) echo nl2br("\nERROR : need Effects");
+	if (!isset($_POST['Form'])) echo nl2br("\nERROR : need Form");
+	if (!isset($_POST['Dosage'])) echo nl2br("\nERROR : need Dosage");
+	if (!isset($_POST['Side_Effects'])) echo nl2br("\nERROR : need Side Effects");
+	if (!isset($_POST['Schedule'])) echo nl2br("\nERROR : need Schedule");
+	if (!isset($_POST['Description'])) echo nl2br("\nERROR : need Description");
+	if (!isset($_POST['Cost'])) echo nl2br("\nERROR : need Cost");
 	echo nl2br("\nERROR : Insertion incomplete");
 //****************************************
 }
@@ -98,17 +98,17 @@ else
 {
 ////**************************************
 //// insertion into MED
-$IMI = $_GET['Med_Id'];
-$IN = $_GET['Name'];  
-$IM = $_GET['Manf'];
-$IC = $_GET['Contents'];
-$IE = $_GET['Effects'];
-$IF = $_GET['Form'];
-$ID = $_GET['Dosage'];
-$ISE = $_GET['Side_Effects'];
-$IS = $_GET['Schedule'];
-$ID = $_GET['Description'];
-$IC = $_GET['Cost'];
+$IMI = $_POST['Med_Id'];
+$IN = $_POST['Name'];  
+$IM = $_POST['Manf'];
+$IC = $_POST['Contents'];
+$IE = $_POST['Effects'];
+$IF = $_POST['Form'];
+$ID = $_POST['Dosage'];
+$ISE = $_POST['Side_Effects'];
+$IS = $_POST['Schedule'];
+$ID = $_POST['Description'];
+$IC = $_POST['Cost'];
 ////****************************************
 	$sql2 = "insert into MEDICATION values($IMI,'$IN', '$IM','$IC','$IE','$IF','$ID','$ISE','$IS','$ID',$IC)";
 	echo PHP_EOL;
