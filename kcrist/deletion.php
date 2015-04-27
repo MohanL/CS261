@@ -14,7 +14,7 @@ $table ='MEDICATION' ;
    <body>
 	<h2>Deletion</h2>
 <!-- Insertion code -->
-<FORM NAME = "form2" METHOD ="post " ACTION = "">
+<FORM NAME = "form2" METHOD ="post" ACTION = "">
 Med ID:<INPUT TYPE = "TEXT" VALUE =" " NAME = "Med_Id">
 <br><br>
 <INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">

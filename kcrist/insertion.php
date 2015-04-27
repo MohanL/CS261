@@ -14,7 +14,7 @@ $table ='MEDICATION' ;
    <body>
 	<h2>Insertion</h2>
 <!-- Insertion code -->
-<FORM NAME = "form2" METHOD ="post " ACTION = "">
+<FORM NAME = "form2" METHOD ="post" ACTION = "">
 Med ID:<INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "Med_Id">
 <br><br>
 Name:<INPUT TYPE = "TEXT" VALUE ="Name" NAME = "Name">
