@@ -200,7 +200,7 @@ $Med_Id = $row['Med_id'];
 $Remark = $row['Remark'];
 $Second_Diag_Date = $row['Second_Diag_Date'];
 $link = 'show';
-$Cancel='Cancel'
+$Cancel='Cancel';
 echo '<tr>';
 // make the entry listing the team span across n+1 rows, where n = size of the team
 echo "<td class='firstrow'>$Diag_Id</td>";
@@ -215,6 +215,9 @@ echo "<td class='firstrow'>$Med_Id</td>";
 echo "<td class='firstrow'>$Remark</td>";
 echo "<td class='firstrow'>$Second_Diag_Date</td>"; 
 echo "<td class='firstrow'><a href='show.php?value=$Diag_Id'>$link</a>
+</div>
+</td>";
+echo "<td class='firstrow'><a href='show.php?value=$Diag_Id'>$Cancel</a>
 </div>
 </td>";
 echo "</tr>\n"; 
