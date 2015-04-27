@@ -92,7 +92,7 @@ if( (!isset($_GET['PI'])) || (!isset($_GET['FN'])) || (!isset($_GET['LN'])) || (
 else
 {
 //**************************************
-// insertion into STAFF
+// insertion into PATIENT
 $IPI = $_GET['PI'];
 $ILN = $_GET['LN'];  
 $IFN = $_GET['FN'];

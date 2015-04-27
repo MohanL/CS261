@@ -64,7 +64,7 @@ if(!isset($_GET['PI']) )
 else
 {
 //**************************************
-// insertion into STAFF
+// insertion into PATIENT
 $IDI = $_GET['PI'];
 //****************************************
 	
