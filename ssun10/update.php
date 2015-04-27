@@ -44,6 +44,12 @@ catch (PDOException $e) {
 }
 // print out information about the query
 echo '<p>', 'Query pull (ssun10) as of ', date("Y-m-d H:i:s"), '</p>';
+
+$Diag_Id = $row['Diag_Id'];
+$Cancel='Cancel';
+echo "<td class='firstrow'><a href='show.php?value=$Diag_Id'>$Cancel</a>
+</div>
+</td>";
 // print out format 
 echo '<table border ="1">';
 echo '<tr>',
@@ -201,10 +207,7 @@ $Remark = $row['Remark'];
 $Second_Diag_Date = $row['Second_Diag_Date'];
 $link = 'show';
 echo '<tr>';
-$Cancel='Cancel';
-echo "<td class='firstrow'><a href='show.php?value=$Diag_Id'>$Cancel</a>
-</div>
-</td>";
+
 // make the entry listing the team span across n+1 rows, where n = size of the team
 echo "<td class='firstrow'>$Diag_Id</td>";
 echo "<td class='firstrow'>$Patient_FName</td>";
