@@ -20,7 +20,7 @@ else	// do the thing
 {
 	?>
 	<form action = "list.php">
-	<label><i></i>PLEASE ENTER VALID ID between 4000 to 5000</i></label>
+	<label><i>PLEASE ENTER VALID ID between 4000 to 5000</i></label>
 	</form>
 	<?php
 }
@@ -29,8 +29,10 @@ else	// do the thing
 </head>
    <body>
 	<h2 style="font-family:verdana">Welcome to the Diagnosis List Page</h2>
-<FORM NAME ="form1" METHOD =" " ACTION = "">
+<FORM ACTION=''>
+Diagnosis ID:<br>
 <INPUT TYPE = "TEXT" VALUE ="Diag_Id" NAME = "value">
+<br>
 <INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
 </FORM>
 
