@@ -22,7 +22,7 @@ $table ='STAFF' ;
 <INPUT TYPE = "TEXT" VALUE ="Department_Id" NAME = "DI">
 <INPUT TYPE = "TEXT" VALUE ="Position_Id" NAME = "PI">
 <INPUT TYPE = "TEXT" VALUE ="Position_Title" NAME = "PT">
-<INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
+<INPUT TYPE = "Submit" Name = "Insert" VALUE = "Update">
 </FORM>
 <!-- Insertion code -->
 
@@ -61,16 +61,18 @@ echo '<tr>',
 	    '<th> show</th>',
       "</tr>\n";
 //******************************************************insertion code
-/*
-echo nl2br("\nInsertion Query Generated:");
-if (!isset($_GET['SI'])) 
+
+echo nl2br("\nUpdate Query Generated:");
+if(!isset($_GET['SI'])) 
 {
 	echo nl2br("\nERROR : need Staff_Id");
 	echo nl2br("\nERROR : Query can't be completed because Staff_Id needed");
 }
+
 else{
 //**************************************
 // insertion into STAFF
+
 $ISI = $_GET['SI'];
 $IFN = $_GET['FN'];
 $ILN = $_GET['LN'];  
@@ -82,9 +84,9 @@ $IE = $_GET['E'];
 $IDI = $_GET['DI'];
 $IPI = $_GET['PI'];
 $IPT = $_GET['PT'];
+
 //****************************************
-/*
-	if(isset($_GET['LN'])&&$ILN!="Last_Name")
+	if(isset($_GET['LN'])&&($ILN!="Last_Name"))
 	{	$sql2 = "update $table set Last_Name= '$ILN' where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;
@@ -92,7 +94,7 @@ $IPT = $_GET['PT'];
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['FN'])&&$IFN!="First_Name")
+	if(isset($_GET['FN'])&&($IFN!="First_Name"))
 	{	$sql2 = "update $table set First_Name= '$IFN' where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;
@@ -100,7 +102,7 @@ $IPT = $_GET['PT'];
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['G'])&&$IG!="Gender")
+	if(isset($_GET['G'])&&($IG!="Gender"))
 	{	$sql2 = "update $table set Gender= $IG where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;
@@ -108,7 +110,7 @@ $IPT = $_GET['PT'];
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['SSN'])&&$ISSN!="SSN")
+	if(isset($_GET['SSN'])&&($ISSN!="SSN"))
 	{	$sql2 = "update $table set SSN= $ISSN where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;
@@ -116,7 +118,7 @@ $IPT = $_GET['PT'];
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['HP'])&&$IHP!="Home_Phone")
+	if(isset($_GET['HP'])&&($IHP!="Home_Phone"))
 	{	$sql2 = "update $table set Home_Phone= $IHP where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;
@@ -124,44 +126,45 @@ $IPT = $_GET['PT'];
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['MP'])&&$IMP!="Mobile_Phone")
+	if(isset($_GET['MP'])&&($IMP!="Mobile_Phone"))
 	{	$sql2 = "update $table set Mobile_Phone= $IMP where Staff_Id = $ISI";
 		echo PHP_EOL;
 		echo $sql2;				
 		$count = $db->exec($sql2);
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['E'])&&$IMP!="Email")
-	{	$sql2 = "update $table set Email= $IE where Staff_Id = $ISI";
+	if(isset($_GET['E'])&&($IE!="Email"))
+	{	$sql2 = "update $table set Email='$IE' where Staff_Id = $ISI";
 		echo PHP_EOL;
 		$count = $db->exec($sql2);
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['DI'])&&$IMP!="Department_Id")
+	if(isset($_GET['DI'])&&($IDI!="Department_Id"))
 	{	$sql2 = "update $table set Department_Id= $IDI where Staff_Id = $ISI";
 		echo PHP_EOL;
 		$count = $db->exec($sql2);
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['PI'])&&$IMP!="Position_Id")
+	if(isset($_GET['PI'])&&($IPI!="Position_Id"))
 	{	$sql2 = "update $table set Position_Id= $IPI where Staff_Id = $ISI";
 		echo PHP_EOL;
 		$count = $db->exec($sql2);
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
-	if(isset($_GET['PT'])&&$IMP!="Position_Title")
+	if(isset($_GET['PT'])&&($IPT!="Position_Title"))
 	{	$sql2 = "update $table set Position_Title= $IPT where Staff_Id = $ISI";
 		echo PHP_EOL;
 		$count = $db->exec($sql2);
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
+
 }
- */ 	
-/
+ 	
+
 //******************************************************insertion code
 // print out 
 $sql = "select * From $table";
