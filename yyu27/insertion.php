@@ -70,44 +70,44 @@ echo '<tr>',
       "</tr>\n";
 //******************************************************insertion code
 echo nl2br("\nInsertion Query Generated:");
-if( (!isset($_GET['PI'])) || (!isset($_GET['FN'])) || (!isset($_GET['LN'])) || (!isset($_GET['G'])) || (!isset($_GET['HP'])) || (!isset($_GET['CP'])) || (!isset($_GET['EC'])) || (!isset($_GET['BD']))|| (!isset($_GET['A'])) || (!isset($_GET['SH']))|| (!isset($_GET['VD'])) || (!isset($_GET['SI']))|| (!isset($_GET['I'])) || (!isset($_GET['MI']))|| (!isset($_GET['R'])))
+if( (!isset($_POST['PI'])) || (!isset($_POST['FN'])) || (!isset($_POST['LN'])) || (!isset($_POST['G'])) || (!isset($_POST['HP'])) || (!isset($_POST['CP'])) || (!isset($_POST['EC'])) || (!isset($_POST['BD']))|| (!isset($_POST['A'])) || (!isset($_POST['SH']))|| (!isset($_POST['VD'])) || (!isset($_POST['SI']))|| (!isset($_POST['I'])) || (!isset($_POST['MI']))|| (!isset($_POST['R'])))
 {
-	if (!isset($_GET['PI'])) echo nl2br("\nERROR : need Patient_Id");
-	if (!isset($_GET['FN'])) echo nl2br("\nERROR : need Patient First_Name");
-	if (!isset($_GET['LN'])) echo nl2br("\nERROR : need Patient Last_Name");
-	if (!isset($_GET['G'])) echo nl2br("\nERROR : need Patient Gender");
-	if (!isset($_GET['HP'])) echo nl2br("\nERROR : need Patient Home_Phone");
-	if (!isset($_GET['CP'])) echo nl2br("\nERROR : need Patient Cell_Phone");
-    if (!isset($_GET['EC'])) echo nl2br("\nERROR : need Patient Emerg_Cont");
-	if (!isset($_GET['BD'])) echo nl2br("\nERROR : need Patient Birthday");
-	if (!isset($_GET['A'])) echo nl2br("\nERROR : need Patient Allergies");
-	if (!isset($_GET['SH'])) echo nl2br("\nERROR : need Patient Surgical_History");
-	if (!isset($_GET['VD'])) echo nl2br("\nERROR : need Patient Visit_Date");
-    if (!isset($_GET['SI'])) echo nl2br("\nERROR : need Patient Staff_Id");
-    if (!isset($_GET['I'])) echo nl2br("\nERROR : need Patient Insurance");
-    if (!isset($_GET['MI'])) echo nl2br("\nERROR : need Patient Med_Id");
-    if (!isset($_GET['R'])) echo nl2br("\nERROR : need Patient Reason");
+	if (!isset($_POST['PI'])) echo nl2br("\nERROR : need Patient_Id");
+	if (!isset($_POST['FN'])) echo nl2br("\nERROR : need Patient First_Name");
+	if (!isset($_POST['LN'])) echo nl2br("\nERROR : need Patient Last_Name");
+	if (!isset($_POST['G'])) echo nl2br("\nERROR : need Patient Gender");
+	if (!isset($_POST['HP'])) echo nl2br("\nERROR : need Patient Home_Phone");
+	if (!isset($_POST['CP'])) echo nl2br("\nERROR : need Patient Cell_Phone");
+    if (!isset($_POST['EC'])) echo nl2br("\nERROR : need Patient Emerg_Cont");
+	if (!isset($_POST['BD'])) echo nl2br("\nERROR : need Patient Birthday");
+	if (!isset($_POST['A'])) echo nl2br("\nERROR : need Patient Allergies");
+	if (!isset($_POST['SH'])) echo nl2br("\nERROR : need Patient Surgical_History");
+	if (!isset($_POST['VD'])) echo nl2br("\nERROR : need Patient Visit_Date");
+    if (!isset($_POST['SI'])) echo nl2br("\nERROR : need Patient Staff_Id");
+    if (!isset($_POST['I'])) echo nl2br("\nERROR : need Patient Insurance");
+    if (!isset($_POST['MI'])) echo nl2br("\nERROR : need Patient Med_Id");
+    if (!isset($_POST['R'])) echo nl2br("\nERROR : need Patient Reason");
 	echo nl2br("\nERROR : Insertion incomplete");
 }
 else
 {
 //**************************************
 // insertion into PATIENT
-$IPI = $_GET['PI'];
-$ILN = $_GET['LN'];  
-$IFN = $_GET['FN'];
-$IG = $_GET['G'];
-$IHP = $_GET['HP'];
-$ICP = $_GET['CP'];
-$IEC = $_GET['EC'];
-$IB = $_GET['BD'];
-$IA = $_GET['A'];
-$ISH = $_GET['SH'];
-$IVD = $_GET['VD'];
-$ISI = $_GET['SI'];
-$II = $_GET['I'];
-$IMI = $_GET['MI'];
-$IR = $_GET['R'];
+$IPI = $_POST['PI'];
+$ILN = $_POST['LN'];  
+$IFN = $_POST['FN'];
+$IG = $_POST['G'];
+$IHP = $_POST['HP'];
+$ICP = $_POST['CP'];
+$IEC = $_POST['EC'];
+$IB = $_POST['BD'];
+$IA = $_POST['A'];
+$ISH = $_POST['SH'];
+$IVD = $_POST['VD'];
+$ISI = $_POST['SI'];
+$II = $_POST['I'];
+$IMI = $_POST['MI'];
+$IR = $_POST['R'];
 //****************************************
 	$sql2 = "insert into $table values($IPI,'$ILN', '$IFN',$IG,$IHP,$ICP,'$IB',$IEC,'$IA','$ISH','$IVD',$ISI,'$II',$IMI,'$IR')";
 	echo PHP_EOL;
