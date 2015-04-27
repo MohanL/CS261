@@ -28,7 +28,7 @@ else	// do the thing
 <title>List Page</title>
 </head>
    <body style="background-color:pink">
-	<h2 style="font-family:verdana",style="color:grey">Welcome to the Diagnosis List Page</h2>
+	<h2 style="font-family:verdana","color:grey">Welcome to the Diagnosis List Page</h2>
 <FORM ACTION=''>
 Diagnosis ID:<br>
 <INPUT TYPE = "TEXT" VALUE ="" NAME = "value">
