@@ -158,8 +158,9 @@ $IPT = $_GET['PT'];
 		// Return number of rows that were deleted 
 		print("Insert $count rows.\n");
 	}
+ */	
 }
-*/
+
 //******************************************************insertion code
 // print out 
 $sql = "select * From $table";
