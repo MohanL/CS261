@@ -10,7 +10,7 @@ $table ='STAFF' ;
    <body>
 	<h2>Update</h2>
 <!-- Insertion code -->
-<FORM NAME = "form2" METHOD =" " ACTION = "">
+<FORM NAME = "form2" METHOD ="post" ACTION = "">
 <INPUT TYPE = "TEXT" VALUE ="Staff_Id" NAME = "SI">
 <INPUT TYPE = "TEXT" VALUE ="First_Name" NAME = "FN">
 <INPUT TYPE = "TEXT" VALUE ="Last_Name" NAME = "LN">
