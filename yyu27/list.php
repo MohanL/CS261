@@ -25,17 +25,28 @@ else	// do the thing
 	<?php
 }
 ?>
-
 <title>List Page</title>
 </head>
-   <body>
-   <h2>list</h2>
-<FORM NAME ="form1" METHOD =" " ACTION = "">
-
-<INPUT TYPE = "TEXT" VALUE ="Patient_Id" NAME = "value">
+   <body style="background-color:pink">
+	<h2 style="font-family:verdana">Welcome to the Patient List Page</h2>
+<FORM ACTION=''>
+Diagnosis ID:<br>
+<INPUT TYPE = "TEXT" VALUE ="" NAME = "value">
 <INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
 </FORM>
-	
+
+<br>
+
+<FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/yyu27/insertion.php">
+Click here to the Insertion Page
+<INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
+</FORM>
+
+<br>
+<FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/yyu27/deletion.php">
+Click here to the Deletion Page
+<INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
+</FORM>
 <?php
 // connect to the database 
 $dbtype = 'mysql';
