@@ -6,7 +6,7 @@ $table ='STAFF' ;
 ?>
 <title>Insertion Page</title>
 </head>
-
+<link rel="stylesheet" type="text/css" href="staff.css">
    <body>
 	<h2>Insertion</h2>
 <!-- Insertion code -->

@@ -6,7 +6,7 @@ $table ='STAFF' ;
 ?>
 <title>Update Page</title>
 </head>
-
+<link rel="stylesheet" type="text/css" href="staff.css">
    <body>
 	<h2>Update</h2>
 <!-- Insertion code -->

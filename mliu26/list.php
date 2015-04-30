@@ -27,7 +27,7 @@ else	// do the thing
 ?>
 <title>List Page</title>
 </head>
-
+<link rel="stylesheet" type="text/css" href="staff.css">
    <body>
 	<h2>List</h2>
 <FORM NAME ="form1" METHOD =" " ACTION = "">

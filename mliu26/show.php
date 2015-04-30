@@ -13,7 +13,7 @@ $value = $_GET['value'];
 ?>
 <title>show Page</title>
 </head>
-
+<link rel="stylesheet" type="text/css" href="staff.css">
    <body>
 	<h2>Show</h2>
 <?php
