@@ -6,7 +6,7 @@ $table ='DIAGNOSIS' ;
 ?>
 <title>Insertion Page</title>
 </head>
-
+<link rel="stylesheet" type="text/css" href="diagnosis.css">
    <body>
 	<h2>Insertion</h2>
 <!-- Insertion code -->

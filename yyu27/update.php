@@ -7,6 +7,7 @@ $table ='PATIENT' ;
 <title>Update Page</title>
 </head>
 
+<link rel="stylesheet" type="text/css" href="patient.css">
    <body>
 	<h2>Update</h2>
 <!-- Insertion code -->

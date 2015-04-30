@@ -13,7 +13,7 @@ $value = $_GET['value'];
 ?>
 <title>show Page</title>
 </head>
-
+<link rel="stylesheet" type="text/css" href="diagnosis.css"> 
    <body>
 	<h2>Show</h2>
 <!-- Insertion code -->

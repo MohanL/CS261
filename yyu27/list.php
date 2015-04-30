@@ -27,7 +27,8 @@ else	// do the thing
 ?>
 <title>List Page</title>
 </head>
-   <body style="background-color:yellow">
+<link rel="stylesheet" type="text/css" href="patient.css">
+   <body>
 	<h2 style="font-family:verdana">Welcome to the Patient List Page</h2>
 <FORM ACTION=''>
 Diagnosis ID:<br>

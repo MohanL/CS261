@@ -7,6 +7,7 @@ $table ='DIAGNOSIS' ;
 <title>Deletion Page</title>
 </head>
 
+<link rel="stylesheet" type="text/css" href="diagnosis.css">
    <body>
 	<h2>Deletion</h2>
 <!-- Insertion code -->
