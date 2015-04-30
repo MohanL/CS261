@@ -12,6 +12,7 @@ $table ='STAFF' ;
 <!-- Insertion code -->
 <FORM NAME = "form2" METHOD ="post" ACTION = "">
 <INPUT TYPE = "TEXT" VALUE ="Staff_Id" NAME = "SI">
+<INPUT TYPE = "BuTTON" onclick="history.go(0)" value ="Cancel">
 <INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
 </FORM>
 <!-- Insertion code -->
@@ -103,7 +104,7 @@ echo "<td class='firstrow'>$Email</td>";
 echo "<td class='firstrow'>$Department_Id</td>";
 echo "<td class='firstrow'>$Position_Id</td>";
 echo "<td class='firstrow'>$Position_Title</td>"; 
-echo "<td class='firstrow'><a href='list_supplementary.php?value=$Staff_Id'>$link</a>
+echo "<td class='firstrow'><a href='show.php?value=$Staff_Id'>$link</a>
 </div>
 </td>";
 echo "</tr>\n"; 

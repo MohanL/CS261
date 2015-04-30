@@ -22,6 +22,7 @@ $table ='STAFF' ;
 <INPUT TYPE = "TEXT" VALUE ="Department_Id" NAME = "DI">
 <INPUT TYPE = "TEXT" VALUE ="Position_Id" NAME = "PI">
 <INPUT TYPE = "TEXT" VALUE ="Position_Title" NAME = "PT">
+<INPUT TYPE = "BuTTON" onclick="history.go(0)" value ="Cancel">
 <INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
 </FORM>
 <!-- Insertion code -->
@@ -131,7 +132,7 @@ echo "<td class='firstrow'>$Email</td>";
 echo "<td class='firstrow'>$Department_Id</td>";
 echo "<td class='firstrow'>$Position_Id</td>";
 echo "<td class='firstrow'>$Position_Title</td>"; 
-echo "<td class='firstrow'><a href='list_supplementary.php?value=$Staff_Id'>$link</a>
+echo "<td class='firstrow'><a href='show.php?value=$Staff_Id'>$link</a>
 </div>
 </td>";
 echo "</tr>\n"; 
