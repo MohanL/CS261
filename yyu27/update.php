@@ -27,6 +27,7 @@ $table ='PATIENT' ;
 <INPUT TYPE = "TEXT" VALUE ="Insurance" NAME = "I">
 <INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "MI">
 <INPUT TYPE = "TEXT" VALUE ="Reason" NAME = "R">
+<INPUT TYPE = "BuTTON" onclick="history.go(0)" value ="Cancel">
 <INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
 </FORM>
 <!-- Insertion code -->

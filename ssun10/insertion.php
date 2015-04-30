@@ -22,7 +22,7 @@ $table ='DIAGNOSIS' ;
 <INPUT TYPE = "TEXT" VALUE ="Med_Id" NAME = "MI">
 <INPUT TYPE = "TEXT" VALUE ="Remark" NAME = "Remark">
 <INPUT TYPE = "TEXT" VALUE ="Second_Diag_Date" NAME = "SDD">
-<input type="button" onclick="alert('Hello World!')" value="Cancel">
+<input type="button" onclick="history.go(0)" value="Cancel">
 <INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
 </FORM>
 <!-- Insertion code -->
@@ -59,7 +59,7 @@ echo '<tr>',
 	    '<th>Med_Id</th>',
 	    '<th>Remark</th>',
 	    '<th>Second_Diag_Date</th>',
-	    '<th> show</th>',
+	    '<th>show</th>',
       "</tr>\n";
 //******************************************************insertion code
 echo nl2br("\nInsertion Query Generated:");
@@ -95,7 +95,7 @@ $IRemark = $_POST['Remark'];
 $ISDD = $_POST['SDD'];
 //****************************************
 	
-$sql2 = "insert into $table values($IDI,'$IPF', '$IPL',$IPI,$ISI,'$IDD',$ISeverity,'$IDDate',$IMI,'$IRemark','$ISDD')";
+$sql2 = "insert into $table values($IDI,'$IPF','$IPL',$IPI,$ISI,'$IDD',$ISeverity,'$IDDate',$IMI,'$IRemark','$ISDD')";
 echo PHP_EOL;
 echo $sql2;
 $count = $db->exec($sql2);
@@ -103,7 +103,6 @@ $count = $db->exec($sql2);
 print("Insert $count rows.\n");
 
 }
-//******************************************************insertion code
 // print out 
 $sql = "select * From $table";
 $stmt = $db->query($sql);

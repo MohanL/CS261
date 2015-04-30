@@ -13,6 +13,7 @@ $table ='DIAGNOSIS' ;
 <!-- Insertion code -->
 <FORM NAME = "form2" METHOD ="post" ACTION = "">
 <INPUT TYPE = "TEXT" VALUE ="Diag_Id" NAME = "DI">
+<INPUT TYPE = "BuTTON" onclick="history.go(0)" value ="Cancel">
 <INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
 </FORM>
 <!-- Insertion code -->
