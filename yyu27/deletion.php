@@ -117,7 +117,7 @@ echo "<td class='firstrow'>$Staff_Id</td>";
 echo "<td class='firstrow'>$Insurance</td>"; 
 echo "<td class='firstrow'>$Med_Id</td>"; 
 echo "<td class='firstrow'>$Reason</td>"; 
-echo "<td class='firstrow'><a href='list_supplementary.php?value=$Patient_Id'>$link</a>
+echo "<td class='firstrow'><a href='show.php?value=$Patient_Id'>$link</a>
 </div>
 </td>";
 echo "</tr>\n"; 
