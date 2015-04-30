@@ -35,6 +35,19 @@ else	// do the thing
 <INPUT TYPE = "TEXT" VALUE ="Staff_Id" NAME = "value">
 <INPUT TYPE = "Submit" Name = "Submit1" VALUE = "search">
 </FORM>
+
+<br>
+
+<FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/mliu26/insertion.php">
+Click here to the Insertion Page
+<INPUT TYPE = "Submit" Name = "Insert" VALUE = "Insert">
+</FORM>
+
+<br>
+<FORM METHOD ="link" ACTION = "http://betaweb.csug.rochester.edu/~mliu26/CS261/mliu26/deletion.php">
+Click here to the Deletion Page
+<INPUT TYPE = "Submit" Name = "Delete" VALUE = "Delete">
+</FORM>
 <?php
 // connect to the database 
 $dbtype = 'mysql';
@@ -105,7 +118,7 @@ echo "<td class='firstrow'>$Email</td>";
 echo "<td class='firstrow'>$Department_Id</td>";
 echo "<td class='firstrow'>$Position_Id</td>";
 echo "<td class='firstrow'>$Position_Title</td>"; 
-echo "<td class='firstrow'><a href='list_supplementary.php?value=$Staff_Id'>$link</a>
+echo "<td class='firstrow'><a href='show.php?value=$Staff_Id'>$link</a>
 </div>
 </td>";
 echo "</tr>\n"; 

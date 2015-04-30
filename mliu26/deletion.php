@@ -4,11 +4,11 @@
 session_start();
 $table ='STAFF' ;
 ?>
-<title>Update Page</title>
+<title>Deletion Page</title>
 </head>
 <link rel="stylesheet" type="text/css" href="staff.css">
    <body>
-	<h2>Update</h2>
+	<h2>Deletion</h2>
 <!-- Insertion code -->
 <FORM NAME = "form2" METHOD ="post" ACTION = "">
 <INPUT TYPE = "TEXT" VALUE ="Staff_Id" NAME = "SI">

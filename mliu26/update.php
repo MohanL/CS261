@@ -196,7 +196,7 @@ echo "<td class='firstrow'>$Email</td>";
 echo "<td class='firstrow'>$Department_Id</td>";
 echo "<td class='firstrow'>$Position_Id</td>";
 echo "<td class='firstrow'>$Position_Title</td>"; 
-echo "<td class='firstrow'><a href='show,php?value=$Staff_Id'>$link</a>
+echo "<td class='firstrow'><a href='show.php?value=$Staff_Id'>$link</a>
 </div>
 </td>";
 echo "</tr>\n"; 

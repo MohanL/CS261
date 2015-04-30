@@ -10,7 +10,7 @@ $attribute = 'Staff_Id';
 $value = $_GET['value'];
 
 ?>
-<title>List Page</title>
+<title>Show Page</title>
 </head>
 <link rel="stylesheet" type="text/css" href="staff.css">
    <body>
@@ -114,10 +114,10 @@ echo '<tr>',
 	    '<th>Department_Id</th>',
 	    '<th>Position_Id</th>',
 	    '<th>Position_Title</th>',
-	    '<th> show</th>',
       "</tr>\n";
 
 // sql query formation
+echo '<br>';
 echo "Query Generated:";
 $sql = "select * from STAFF where $attribute = $value";
 echo PHP_EOL;
@@ -151,6 +151,11 @@ echo "<td class='firstrow'>$Mobile_Phone</td>";
 echo "<td class='firstrow'>$Email</td>";
 echo "<td class='firstrow'>$Department_Id</td>";
 echo "<td class='firstrow'>$Position_Id</td>";
+echo "<td class='firstrow'>$Position_Title</td>";
+
+echo '<\tr>';
+}
+echo '</table>';
 ?>
 
     </body>
